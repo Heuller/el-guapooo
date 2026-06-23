@@ -250,7 +250,7 @@ export const recipes: RecipeProps[] = [
     title: "Massa de Cuca de Chocolate",
     chips: [{"label":"Tangzhong","accent":false},{"label":"75% hidratação · Cacau + Café","accent":true},{"label":"Massa Enriquecida","accent":false},{"label":"Perfil Intenso & Úmido","accent":false}],
     meta: [{"label":"Rendimento","value":"1 forma 30×40cm ou 2 de 20×30cm"},{"label":"Preparo total","value":"4–6h (ou 18h c/ cold retard)"}],
-    image: "images/el-guapo-img-03.webp",
+    image: "images/el-guapo-img-04.webp",
     ingredients: [
       {
         name: "A. Tangzhong (retirado da fórmula)",
@@ -408,7 +408,7 @@ export const recipes: RecipeProps[] = [
     title: "Crumble Básico para Cucas",
     chips: [{"label":"Farofa Clássica","accent":false},{"label":"Manteiga Gelada","accent":true},{"label":"Toque Cítrico & Canela","accent":false},{"label":"Cobertura Universal","accent":false}],
     meta: [{"label":"Rendimento","value":"cobertura para 1 forma grande"},{"label":"Preparo","value":"10–15 min (+ 30 min geladeira)"}],
-    image: "images/el-guapo-img-03.webp",
+    image: "",
     ingredients: [
       {
         name: "A. Estrutura",
@@ -479,7 +479,7 @@ export const recipes: RecipeProps[] = [
     title: "Crumble de Chocolate",
     chips: [{"label":"Farofa de Chocolate","accent":false},{"label":"Cacau + Café Solúvel","accent":true},{"label":"Açúcar Duplo","accent":false},{"label":"Perfil Intenso","accent":false}],
     meta: [{"label":"Rendimento","value":"cobertura para 1 forma grande"},{"label":"Preparo","value":"10–15 min (+ 30 min geladeira)"}],
-    image: "images/el-guapo-img-03.webp",
+    image: "",
     ingredients: [
       {
         name: "A. Estrutura",
@@ -560,7 +560,7 @@ export const recipes: RecipeProps[] = [
     title: "Pão de Ló Padrão",
     chips: [{"label":"Massa Aerada","accent":false},{"label":"Baunilha · Vinagre Estabilizador","accent":true},{"label":"Ponto de Fita","accent":false},{"label":"Base Universal","accent":false}],
     meta: [{"label":"Rendimento","value":"2 discos Ø20cm ou 1 forma 20×30cm"},{"label":"Forno","value":"180°C · 25–30 min"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-05.webp",
     ingredients: [
       {
         name: "Fórmula (100% = 150g farinha)",
@@ -667,7 +667,7 @@ export const recipes: RecipeProps[] = [
     title: "Bolo de Cenoura da Gabriela",
     chips: [{"label":"Cenoura + Óleo","accent":false},{"label":"Cobertura Casquinha ou Cremosa","accent":true},{"label":"Massa Úmida","accent":false},{"label":"Forno 180°C","accent":false}],
     meta: [{"label":"Rendimento","value":"1 bolo médio / 10–12 fatias"},{"label":"Forno","value":"180°C · 40–50 min"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/bolo-cenoura-gabriela.jpeg",
     ingredients: [
       {
         name: "Massa",
@@ -785,7 +785,7 @@ export const recipes: RecipeProps[] = [
     title: "Pão de Ló de Chocolate",
     chips: [{"label":"Cacau + Água (sem lactose)","accent":false},{"label":"Massa Aerada · Perfil Intenso","accent":true},{"label":"Ponto de Fita","accent":false},{"label":"Base do Bolo Prestígio","accent":false}],
     meta: [{"label":"Rendimento","value":"2 discos Ø20cm ou 1 forma 20×30cm"},{"label":"Forno","value":"180°C · 25–30 min"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-06.webp",
     ingredients: [
       {
         name: "Fórmula (100% = 130g farinha)",
@@ -876,7 +876,7 @@ export const recipes: RecipeProps[] = [
     title: "Brigadeiro El Guapo",
     chips: [{"label":"Recheio de Bolo","accent":false},{"label":"Chocolate Meio Amargo + Cacau 70%","accent":true},{"label":"Ganache-Brigadeiro","accent":false},{"label":"Base do Bolo Prestígio","accent":false}],
     meta: [{"label":"Rendimento","value":"recheio para 1 bolo de 3 camadas Ø20cm"},{"label":"Preparo","value":"15–20 min + 2h geladeira"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-07.webp",
     ingredients: [
       {
         name: "Fórmula",
@@ -945,7 +945,7 @@ export const recipes: RecipeProps[] = [
     title: "Recheio de Coco El Guapo",
     chips: [{"label":"Recheio de Bolo","accent":false},{"label":"Coco em Flocos · Cremoso","accent":true},{"label":"Leite Condensado + Creme de Leite","accent":false},{"label":"Base do Bolo Prestígio","accent":false}],
     meta: [{"label":"Rendimento","value":"recheio para 1 bolo de 3 camadas Ø20cm"},{"label":"Preparo","value":"15–20 min + 2h geladeira"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-08.webp",
     ingredients: [
       {
         name: "Fórmula",
@@ -1006,7 +1006,7 @@ export const recipes: RecipeProps[] = [
     title: "Pão de Queijo do Heuller",
     chips: [{"label":"Método Escaldamento","accent":false},{"label":"Blend 50/50 Polvilhos","accent":true},{"label":"Queijo Curado","accent":false},{"label":"Crosta Crocante","accent":false}],
     meta: [{"label":"Rendimento","value":"~50 un. (30g)"},{"label":"Dificuldade","value":"Média"}],
-    image: "images/el-guapo-img-05.webp",
+    image: "images/el-guapo-img-09.webp",
     ingredients: [
       {
         name: "A. Blend de Amidos (Estrutura)",
@@ -1127,7 +1127,7 @@ export const recipes: RecipeProps[] = [
     title: "Pão do Heuller e da Gabriela",
     chips: [{"label":"Massa Enriquecida","accent":false},{"label":"Baunilha · Manteiga","accent":true},{"label":"~53% hidratação","accent":false},{"label":"Pão Doce Afetivo","accent":false}],
     meta: [{"label":"Base de farinha","value":"600g"},{"label":"Hidratação aprox.","value":"~53%"}],
-    image: "images/el-guapo-img-05.webp",
+    image: "images/el-guapo-img-10.webp",
     ingredients: [
       {
         name: "Fórmula (100% = 600g farinha)",
@@ -1231,7 +1231,7 @@ export const recipes: RecipeProps[] = [
     title: "Panetone El Guapo",
     chips: [{"label":"Método Indireto · Esponja","accent":false},{"label":"Longa Fermentação","accent":true},{"label":"Aroma Artesanal","accent":false},{"label":"Gotas de Chocolate","accent":false}],
     meta: [{"label":"Rendimento","value":"2 panetones de 500g"},{"label":"Preparo total","value":"1h + 12–18h fermentação"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-11.webp",
     ingredients: [
       {
         name: "Esponja (Pré-fermento)",
@@ -1385,7 +1385,7 @@ export const recipes: RecipeProps[] = [
     title: "Banana Bread El Guapo",
     chips: [{"label":"Beurre Noisette","accent":false},{"label":"Açúcar Mascavo","accent":true},{"label":"Textura Chewy","accent":false},{"label":"Iogurte Natural","accent":false}],
     meta: [{"label":"Rendimento","value":"1 forma inglesa grande (~1,2kg)"},{"label":"Preparo","value":"20 min + 50–60 min forno"}],
-    image: "images/el-guapo-img-04.webp",
+    image: "images/el-guapo-img-12.webp",
     ingredients: [
       {
         name: "A. Base Úmida e Aromática (Líquidos)",
