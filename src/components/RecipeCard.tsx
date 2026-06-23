@@ -61,7 +61,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
         aria-expanded={isOpen}
       >
         <div className="flex-1 min-w-0">
-          <h3 className="font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink group-hover:text-terra transition-colors truncate">
+          <h3 className="font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink group-hover:text-terra transition-colors pr-4">
             {recipe.title}
           </h3>
           <div className="flex flex-wrap gap-2 mt-3">
@@ -110,8 +110,15 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
           >
             <div className="p-8 pt-0 border-t border-line/50">
               
+              {/* Recipe Image */}
+              {recipe.image && (
+                <div className="mt-8 rounded-2xl overflow-hidden border border-line shadow-sm relative aspect-[21/9] bg-paper-light">
+                  <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover" />
+                </div>
+              )}
+
               {/* Toolbar Premium */}
-              <div className="flex flex-wrap items-center justify-between gap-4 mt-6 p-2 bg-paper rounded-2xl border border-line shadow-sm">
+              <div className="flex flex-wrap items-center justify-between gap-4 mt-8 p-2 bg-paper rounded-2xl border border-line shadow-sm">
                 
                 {/* Scale Controls */}
                 <div className="flex items-center bg-paper-light rounded-xl p-1 border border-line">
