@@ -59,7 +59,7 @@ export const TimerDock = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-28 right-8 z-[110] w-80 bg-paper-light border border-line rounded-2xl shadow-2xl overflow-hidden font-body"
+            className="fixed bottom-28 right-4 sm:right-8 z-[110] w-[calc(100vw-2rem)] sm:w-80 max-w-[320px] bg-paper-light border border-line rounded-2xl shadow-2xl overflow-hidden font-body"
           >
             <div className="p-4 border-b border-line bg-paper flex items-center justify-between">
               <h3 className="font-disp italic text-lg text-ink">Timers Ativos</h3>

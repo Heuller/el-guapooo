@@ -61,9 +61,9 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
         aria-expanded={isOpen}
       >
         <div className="flex-1 min-w-0">
-          <h3 className="font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink group-hover:text-terra transition-colors pr-4">
+          <span role="heading" aria-level={3} className="block font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink group-hover:text-terra transition-colors pr-4">
             {recipe.title}
-          </h3>
+          </span>
           <div className="flex flex-wrap gap-2 mt-3">
             {recipe.chips.map((chip, i) => (
               <span

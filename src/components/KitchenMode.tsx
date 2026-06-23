@@ -66,7 +66,7 @@ export const KitchenMode = () => {
           </header>
 
           {/* Main Content Area */}
-          <main className="flex-1 overflow-hidden relative flex flex-col justify-center px-8 md:px-20">
+          <main className="flex-1 overflow-y-auto relative flex flex-col justify-center px-8 md:px-20 py-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStepIndex}
