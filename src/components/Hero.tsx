@@ -50,7 +50,7 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 1.3 }}
           className="font-disp text-[clamp(0.95rem,1.8vw,1.25rem)] font-light italic text-ink-soft tracking-[0.06em]"
         >
-          cozinha artesanal · fermentação natural · ingredientes autorais
+          Feito com o coração, para surpreender o seu <span className="text-terra">♥</span>
         </motion.p>
       </div>
 
