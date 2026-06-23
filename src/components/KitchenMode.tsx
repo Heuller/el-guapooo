@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon } from 'lucide-react';
 import { useKitchenStore } from '../store/useKitchenStore';
+import { useTimerStore } from '../store/useTimerStore';
+import { extractTimers } from '../lib/extractTimers';
 import { cn } from '../lib/utils';
 import confetti from 'canvas-confetti';
 
@@ -78,8 +80,25 @@ export const KitchenMode = () => {
                   <span className="font-disp text-7xl md:text-[8rem] leading-none text-dark-warm italic shrink-0">
                     {String(currentStepIndex + 1).padStart(2, '0')}
                   </span>
-                  <div className="text-xl md:text-3xl leading-relaxed font-light text-paper-light mt-4">
-                    {steps[currentStepIndex]}
+                  <div className="flex-1">
+                    <div className="text-xl md:text-3xl leading-relaxed font-light text-paper-light mt-4 [&_.text-ink]:text-sand [&_strong]:text-sand">
+                      {steps[currentStepIndex]}
+                    </div>
+                    {/* Render Timers */}
+                    {extractTimers(steps[currentStepIndex]).length > 0 && (
+                      <div className="mt-8 flex flex-wrap gap-3">
+                        {extractTimers(steps[currentStepIndex]).map((timer, i) => (
+                          <button
+                            key={i}
+                            onClick={() => useTimerStore.getState().addTimer(timer.seconds, `${recipeName} - Passo ${currentStepIndex + 1} (${timer.timeLabel})`)}
+                            className="flex items-center gap-2 bg-terra/20 hover:bg-terra/40 border border-terra/50 text-terra-light px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                          >
+                            <TimerIcon size={16} />
+                            <span>ativar timer: {timer.timeLabel}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
