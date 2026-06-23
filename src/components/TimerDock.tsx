@@ -38,7 +38,7 @@ export const TimerDock = () => {
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "fixed bottom-8 right-8 z-[90] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors border",
+          "fixed bottom-8 right-8 z-[110] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors border",
           activeCount > 0
             ? "bg-terra border-terra text-white animate-pulse-slow"
             : "bg-paper border-line text-ink"
@@ -59,7 +59,7 @@ export const TimerDock = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-28 right-8 z-[90] w-80 bg-paper-light border border-line rounded-2xl shadow-2xl overflow-hidden font-body"
+            className="fixed bottom-28 right-8 z-[110] w-80 bg-paper-light border border-line rounded-2xl shadow-2xl overflow-hidden font-body"
           >
             <div className="p-4 border-b border-line bg-paper flex items-center justify-between">
               <h3 className="font-disp italic text-lg text-ink">Timers Ativos</h3>

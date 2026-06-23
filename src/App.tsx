@@ -7,6 +7,15 @@ import { KitchenMode } from './components/KitchenMode';
 import { TimerDock } from './components/TimerDock';
 import { recipes } from './data/recipes';
 
+const categories = [
+  { id: "pizzas", num: "01", name: "Pizzas", sub: "massas · molhos · montagem", filter: (id: string) => id.startsWith('pizza') },
+  { id: "focaccias", num: "02", name: "Focaccias", sub: "salgadas & doces", filter: (id: string) => id.startsWith('focaccia') },
+  { id: "cucas", num: "03", name: "Cucas", sub: "massas & coberturas", filter: (id: string) => id.startsWith('cuca') },
+  { id: "bolos", num: "04", name: "Bolos", sub: "massas & recheios", filter: (id: string) => id.startsWith('bolo') && !id.includes('panetone') && !id.includes('banana-bread') },
+  { id: "quitanda", num: "05", name: "Quitanda", sub: "padaria brasileira artesanal", filter: (id: string) => id.startsWith('pao') },
+  { id: "especiais", num: "06", name: "Especiais", sub: "receitas premium & sazonais", filter: (id: string) => id.includes('panetone') || id.includes('banana-bread') },
+];
+
 function App() {
   return (
     <div className="bg-paper min-h-screen text-ink font-body selection:bg-terra/20">
@@ -18,41 +27,28 @@ function App() {
         <TOC />
         
         <div className="max-w-5xl mx-auto px-8 pb-32">
-          {/* Section 01 */}
-          <section id="pizzas" className="pt-32">
-            <div className="flex items-end gap-8 border-b border-line pb-10 mb-12">
-              <span className="font-disp text-[5rem] font-light text-line-dark leading-none">01</span>
-              <div>
-                <h2 className="font-disp text-[clamp(3rem,7vw,6rem)] font-medium leading-none mb-4">Pizzas</h2>
-                <span className="text-[0.67rem] tracking-[0.2em] uppercase text-ink-soft">Massas · Molhos · Montagem</span>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-6 mb-12">
-              <span className="flex-1 h-[1px] bg-line" />
-              <span className="text-[0.65rem] tracking-[0.42em] uppercase text-terra font-light">Massas</span>
-              <span className="flex-1 h-[1px] bg-line" />
-            </div>
+          {categories.map((cat) => {
+            const catRecipes = recipes.filter(r => cat.filter(r.id));
+            if (catRecipes.length === 0) return null;
 
-            <div className="space-y-6">
-              <RecipeCard recipe={recipes[0]} />
-            </div>
-          </section>
-
-          {/* Section 02 */}
-          <section id="focaccias" className="pt-32">
-            <div className="flex items-end gap-8 border-b border-line pb-10 mb-12">
-              <span className="font-disp text-[5rem] font-light text-line-dark leading-none">02</span>
-              <div>
-                <h2 className="font-disp text-[clamp(3rem,7vw,6rem)] font-medium leading-none mb-4">Focaccias</h2>
-                <span className="text-[0.67rem] tracking-[0.2em] uppercase text-ink-soft">Salgadas & Doces</span>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <RecipeCard recipe={recipes[1]} />
-            </div>
-          </section>
+            return (
+              <section key={cat.id} id={cat.id} className="pt-32">
+                <div className="flex items-end gap-8 border-b border-line pb-10 mb-12">
+                  <span className="font-disp text-[5rem] font-light text-line-dark leading-none">{cat.num}</span>
+                  <div>
+                    <h2 className="font-disp text-[clamp(3rem,7vw,6rem)] font-medium leading-none mb-4">{cat.name}</h2>
+                    <span className="text-[0.67rem] tracking-[0.2em] uppercase text-ink-soft">{cat.sub}</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  {catRecipes.map(recipe => (
+                    <RecipeCard key={recipe.id} recipe={recipe} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </main>
     </div>
