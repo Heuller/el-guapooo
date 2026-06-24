@@ -1533,4 +1533,65 @@ export const recipes: RecipeProps[] = [
     ],
     notes: []
   },
+  {
+    id: "bolo-pao-de-mel",
+    title: "Bolo Pão de Mel",
+    chips: [
+      { label: "Tradição e Sabor", accent: false },
+      { label: "Massa de mel e especiarias", accent: true },
+      { label: "Recheio de doce de leite", accent: false },
+      { label: "Cobertura de chocolate", accent: false },
+      { label: "Úmido, macio e perfumado", accent: false }
+    ],
+    meta: [
+      { label: "Rendimento", value: "1 bolo estruturado" },
+      { label: "Categoria", value: "Bolos" }
+    ],
+    image: "images/bolo-pao-de-mel.jpg",
+    ingredients: [
+      {
+        name: "Massa (Pão de Ló Especiarias)",
+        items: [
+          { name: "Ovos", qty: "4 un." },
+          { name: "Açúcar", qty: "200g" },
+          { name: "Farinha de trigo", qty: "140g" },
+          { name: "Mel", qty: "60g" },
+          { name: "Óleo", qty: "65ml" },
+          { name: "Água quente", qty: "60ml" },
+          { name: "Cacau em pó", qty: "10g" },
+          { name: "Canela em pó", qty: "2 col. café" },
+          { name: "Cravo em pó", qty: "1 col. café" },
+          { name: "Gengibre em pó (ou noz moscada)", qty: "1 col. café" },
+          { name: "Fermento químico para bolos", qty: "1 col. sopa rasa" }
+        ]
+      },
+      {
+        name: "Calda de Infusão",
+        items: [
+          { name: "Água", qty: "240ml" },
+          { name: "Açúcar", qty: "90g" },
+          { name: "Pau de canela", qty: "1 un." },
+          { name: "Cravos-da-índia", qty: "5 un." }
+        ]
+      },
+      {
+        name: "Recheio e Cobertura",
+        items: [
+          { name: "Doce de leite firme (recheio)", qty: "400g" },
+          { name: "Chocolate meio amargo (ganache)", qty: "300g" },
+          { name: "Creme de leite (ganache)", qty: "120g" }
+        ]
+      }
+    ],
+    method: [
+      { text: <><strong>Calda.</strong> Em uma panela, junte a água, o açúcar, a canela e os cravos. Leve ao fogo e deixe ferver até o açúcar dissolver por completo. Desligue, deixe esfriar e coe. Reserve.</> },
+      { text: <><strong>Massa (Método Espumoso).</strong> Na batedeira, bata os ovos com o açúcar até obter um creme claro, fofo e volumoso (ponto de fita).</> },
+      { text: <><strong>Emulsão dos Líquidos.</strong> À parte, dissolva o mel e o cacau na água quente. Incorpore o óleo a esta mistura.</> },
+      { text: <><strong>Incorporação.</strong> Adicione a mistura de líquidos ao creme de ovos de forma delicada. Peneire a farinha, as especiarias e o fermento. Envolva os ingredientes secos na massa utilizando uma espátula, com movimentos suaves de baixo para cima, para não perder a aeração.</> },
+      { text: <><strong>Cozimento.</strong> Despeje a massa em uma forma untada e leve ao forno preaquecido a 180 °C por aproximadamente 35 a 40 minutos (faça o teste do palito).</> },
+      { text: <><strong>Ganache.</strong> Derreta o chocolate meio amargo (em banho-maria ou no micro-ondas em intervalos de 30 segundos). Incorpore o creme de leite e mexa vigorosamente até obter uma emulsão lisa e brilhante.</> },
+      { text: <><strong>Montagem.</strong> Após o bolo esfriar, corte-o em camadas. Umedeça cada camada de massa de forma generosa com a calda de especiarias. Aplique uma camada uniforme do doce de leite firme. Cubra o bolo montado com a ganache de chocolate meio amargo.</> }
+    ],
+    notes: []
+  }
 ];
