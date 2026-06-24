@@ -99,7 +99,7 @@ export const recipes: RecipeProps[] = [
     id: "cuca-massa-base",
     title: "Massa Base de Cuca",
     chips: [{"label":"Tangzhong","accent":false},{"label":"75% hidratação","accent":true},{"label":"Massa Enriquecida","accent":false},{"label":"Baunilha · Raspas Cítricas","accent":false}],
-    meta: [{"label":"Rendimento","value":"1 forma 30×40cm ou 2 de 20×30cm"},{"label":"Preparo total","value":"4–6h (ou 18h c/ cold retard)"}],
+    meta: [{"label":"Rendimento","value":"1 forma 30×40cm ou 2 de 20×30cm"},{"label":"Preparo total","value":"4–6h (ou 18h c/ fermentação a frio)"}],
     image: "images/el-guapo-img-03.webp",
     ingredients: [
       {
@@ -217,7 +217,7 @@ export const recipes: RecipeProps[] = [
                     1h30 a 2h, até dobrar de volume. Para sabor mais profundo e
                     miolo de textura superior: após 20 minutos em temperatura
                     ambiente, leve à geladeira por
-                    <strong>12 a 18h</strong> (cold retard) — o frio retarda o
+                    <strong>12 a 18h</strong> (fermentação a frio) — o frio retarda o
                     fermento e ativa as enzimas que desenvolvem complexidade
                     aromática.</> },
       { text: <><strong>Modelagem na forma.</strong> Unte e enfarinhe a
@@ -249,7 +249,7 @@ export const recipes: RecipeProps[] = [
     id: "cuca-massa-chocolate",
     title: "Massa de Cuca de Chocolate",
     chips: [{"label":"Tangzhong","accent":false},{"label":"75% hidratação · Cacau + Café","accent":true},{"label":"Massa Enriquecida","accent":false},{"label":"Perfil Intenso & Úmido","accent":false}],
-    meta: [{"label":"Rendimento","value":"1 forma 30×40cm ou 2 de 20×30cm"},{"label":"Preparo total","value":"4–6h (ou 18h c/ cold retard)"}],
+    meta: [{"label":"Rendimento","value":"1 forma 30×40cm ou 2 de 20×30cm"},{"label":"Preparo total","value":"4–6h (ou 18h c/ fermentação a frio)"}],
     image: "images/el-guapo-img-04.webp",
     ingredients: [
       {
@@ -373,7 +373,7 @@ export const recipes: RecipeProps[] = [
       { text: <><strong>Primeira fermentação.</strong> Forme uma bola,
                     transfira para tigela levemente untada e cubra com filme
                     plástico. Para a cuca de chocolate, o
-                    <strong>cold retard de 12 a 18h</strong> é especialmente
+                    <strong>fermentação a frio de 12 a 18h</strong> é especialmente
                     recomendado: o repouso prolongado no frio permite que os
                     compostos aromáticos do cacau — fenólicos e ésteres — se
                     integrem profundamente à massa, resultando em sabor mais
@@ -1351,10 +1351,10 @@ export const recipes: RecipeProps[] = [
                     mínima e adicione as gotas de chocolate (ou frutas
                     cristalizadas). Misture por apenas 1 minuto para distribuir
                     uniformemente sem rasgar o glúten.</> },
-      { text: <><strong>Primeira Fermentação e Cold Retard.</strong>
+      { text: <><strong>Primeira Fermentação e Fermentação a Frio.</strong>
                     Transfira a massa para um recipiente untado com manteiga.
                     Deixe descansar por 1h em temperatura ambiente e, em
-                    seguida, leve à geladeira (cold retard) a 4°C por 12 a 18
+                    seguida, leve à geladeira (fermentação a frio) a 4°C por 12 a 18
                     horas para desenvolver sabores complexos e estabilizar a
                     manteiga.</> },
       { text: <><strong>Divisão e Boleamento.</strong> Retire a massa fria

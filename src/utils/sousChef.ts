@@ -12,7 +12,16 @@ export const generateSousChefPrompt = (recipe: RecipeProps, multiplier: number) 
     });
   });
 
-  const methodText = recipe.method.map((step, i) => `${i + 1}. ${step.text}`).join('\n');
+  const extractTextFromNode = (node: any): string => {
+    if (typeof node === 'string' || typeof node === 'number') return String(node);
+    if (Array.isArray(node)) return node.map(extractTextFromNode).join('');
+    if (node && typeof node === 'object' && node.props && node.props.children) {
+      return extractTextFromNode(node.props.children);
+    }
+    return '';
+  };
+
+  const methodText = recipe.method.map((step, i) => `${i + 1}. ${extractTextFromNode(step.text)}`).join('\n');
   const notesText = recipe.notes && recipe.notes.length > 0
     ? recipe.notes.map(n => `NOTA - ${n.title}: ${n.content}`).join('\n') 
     : "Nenhuma nota técnica.";
@@ -40,18 +49,13 @@ SUA TAREFA: Assuma a personalidade do SousChef e envie a seguinte mensagem (ou v
 export const handleAskSousChef = async (recipe: RecipeProps, multiplier: number) => {
   const prompt = generateSousChefPrompt(recipe, multiplier);
   
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: 'Dúvida - SousChef',
-        text: prompt
-      });
-      return;
-    } catch (e) {
-      console.log('Compartilhamento ignorado pelo usuário ou falhou.');
-    }
+  try {
+    await navigator.clipboard.writeText(prompt);
+  } catch (e) {
+    console.error("Failed to copy", e);
   }
-  
+
+  // Fallback garantido: abre o ChatGPT preenchido
   const gptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
   window.open(gptUrl, '_blank');
 };

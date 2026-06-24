@@ -50,7 +50,7 @@ function App() {
               {results.length} {results.length === 1 ? 'receita encontrada' : 'receitas encontradas'} para "{query}"
             </p>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
               {results.map(r => {
                 const recipe = recipes.find(x => x.id === r.id);
                 return recipe ? <RecipeCard key={recipe.id} recipe={recipe} /> : null;
@@ -75,7 +75,7 @@ function App() {
                     </div>
                   </div>
                   
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                     {catRecipes.map(recipe => (
                       <RecipeCard key={recipe.id} recipe={recipe} />
                     ))}
