@@ -1,6 +1,7 @@
-// @ts-ignore
+
 import { pipeline, env } from '@xenova/transformers';
 import { getEmbedding, saveEmbedding, getAllEmbeddings } from '../utils/idb';
+import { extractTextForRecipe } from '../lib/recipeTextExtractor';
 
 env.allowLocalModels = false; 
 
@@ -23,22 +24,6 @@ const init = async () => {
   } catch (error: any) {
     self.postMessage({ type: 'ERROR', payload: error.message });
   }
-};
-
-const extractTextForRecipe = (recipe: any) => {
-  const parts = [recipe.title];
-  recipe.chips?.forEach((c: any) => parts.push(c.label));
-  recipe.meta?.forEach((m: any) => parts.push(`${m.label}: ${m.value}`));
-  recipe.ingredients?.forEach((g: any) => {
-    parts.push(g.name);
-    g.items.forEach((item: any) => parts.push(item.name));
-  });
-  recipe.method?.forEach((m: any) => parts.push(m.text));
-  recipe.notes?.forEach((n: any) => {
-    parts.push(n.title);
-    parts.push(n.content);
-  });
-  return parts.join(' ').toLowerCase();
 };
 
 const indexRecipes = async (recipes: any[]) => {

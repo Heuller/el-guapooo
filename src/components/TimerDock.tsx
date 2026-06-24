@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Timer as TimerIcon, Play, Pause, X, Plus } from 'lucide-react';
 import { useTimerStore } from '../store/useTimerStore';
@@ -41,7 +41,7 @@ export const TimerDock = () => {
           "fixed bottom-8 right-8 z-[110] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors border",
           activeCount > 0
             ? "bg-terra border-terra text-white animate-pulse-slow"
-            : "bg-paper border-line text-ink"
+            : "bg-paper dark:bg-paper-invert border-line dark:border-line-invert text-ink dark:text-ink-invert"
         )}
       >
         <TimerIcon size={24} strokeWidth={1.5} />
@@ -59,11 +59,11 @@ export const TimerDock = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-28 right-4 sm:right-8 z-[110] w-[calc(100vw-2rem)] sm:w-80 max-w-[320px] bg-paper-light border border-line rounded-2xl shadow-2xl overflow-hidden font-body"
+            className="fixed bottom-28 right-4 sm:right-8 z-[110] w-[calc(100vw-2rem)] sm:w-80 max-w-[320px] bg-paper-light dark:bg-paper-invert-light border border-line dark:border-line-invert rounded-2xl shadow-2xl overflow-hidden font-body transition-colors"
           >
-            <div className="p-4 border-b border-line bg-paper flex items-center justify-between">
-              <h3 className="font-disp italic text-lg text-ink">Timers Ativos</h3>
-              <button onClick={() => setIsAdding(!isAdding)} className="text-ink-soft hover:text-terra p-1">
+            <div className="p-4 border-b border-line dark:border-line-invert bg-paper dark:bg-paper-invert flex items-center justify-between transition-colors">
+              <h3 className="font-disp italic text-lg text-ink dark:text-ink-invert transition-colors">Timers Ativos</h3>
+              <button onClick={() => setIsAdding(!isAdding)} className="text-ink-soft dark:text-ink-invert-soft hover:text-terra p-1 transition-colors">
                 {isAdding ? <X size={18} /> : <Plus size={18} />}
               </button>
             </div>
@@ -75,26 +75,26 @@ export const TimerDock = () => {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   onSubmit={handleAdd}
-                  className="p-4 bg-sand/30 border-b border-line"
+                  className="p-4 bg-sand/30 dark:bg-paper-invert/50 border-b border-line dark:border-line-invert transition-colors"
                 >
                   <div className="flex gap-2 mb-3">
                     <input
                       type="number"
                       value={newMinutes}
                       onChange={e => setNewMinutes(e.target.value)}
-                      className="w-20 bg-paper border border-line rounded-md px-2 py-1 text-ink focus:outline-none focus:border-terra"
+                      className="w-20 bg-paper dark:bg-paper-invert border border-line dark:border-line-invert rounded-md px-2 py-1 text-ink dark:text-ink-invert focus:outline-none focus:border-terra transition-colors"
                       min="1"
                     />
-                    <span className="text-ink-soft self-center text-sm">min</span>
+                    <span className="text-ink-soft dark:text-ink-invert-soft self-center text-sm transition-colors">min</span>
                   </div>
                   <input
                     type="text"
                     value={newLabel}
                     onChange={e => setNewLabel(e.target.value)}
                     placeholder="Nome (ex: Forno)"
-                    className="w-full bg-paper border border-line rounded-md px-2 py-1 mb-3 text-ink focus:outline-none focus:border-terra text-sm"
+                    className="w-full bg-paper dark:bg-paper-invert border border-line dark:border-line-invert rounded-md px-2 py-1 mb-3 text-ink dark:text-ink-invert focus:outline-none focus:border-terra text-sm transition-colors"
                   />
-                  <button type="submit" className="w-full bg-ink text-paper py-2 rounded-md text-sm uppercase tracking-widest hover:bg-terra transition-colors">
+                  <button type="submit" className="w-full bg-ink dark:bg-ink-invert text-paper dark:text-paper-invert py-2 rounded-md text-sm uppercase tracking-widest hover:bg-terra dark:hover:bg-terra-light transition-colors">
                     Iniciar
                   </button>
                 </motion.form>
@@ -112,15 +112,15 @@ export const TimerDock = () => {
                   layout
                   key={timer.id}
                   className={cn(
-                    "p-4 border-b border-line last:border-b-0 flex items-center justify-between transition-colors",
+                    "p-4 border-b border-line dark:border-line-invert last:border-b-0 flex items-center justify-between transition-colors",
                     timer.done ? "bg-terra/10" : ""
                   )}
                 >
                   <div>
-                    <span className="block text-xs uppercase tracking-wider text-ink-soft mb-1">{timer.label}</span>
+                    <span className="block text-xs uppercase tracking-wider text-ink-soft dark:text-ink-invert-soft mb-1">{timer.label}</span>
                     <span className={cn(
-                      "font-disp text-2xl leading-none",
-                      timer.done ? "text-terra font-medium" : "text-ink"
+                      "font-disp text-2xl leading-none transition-colors",
+                      timer.done ? "text-terra font-medium" : "text-ink dark:text-ink-invert"
                     )}>
                       {timer.done ? "00:00" : formatTime(timer.remaining)}
                     </span>
@@ -129,7 +129,7 @@ export const TimerDock = () => {
                     {!timer.done && (
                       <button
                         onClick={() => timer.paused ? resumeTimer(timer.id) : pauseTimer(timer.id)}
-                        className="w-8 h-8 rounded-full border border-line flex items-center justify-center text-ink hover:text-terra hover:border-terra transition-colors"
+                        className="w-8 h-8 rounded-full border border-line dark:border-line-invert flex items-center justify-center text-ink dark:text-ink-invert hover:text-terra hover:border-terra transition-colors"
                       >
                         {timer.paused ? <Play size={14} fill="currentColor" /> : <Pause size={14} fill="currentColor" />}
                       </button>

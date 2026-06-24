@@ -23,7 +23,7 @@ export const generateSousChefPrompt = (recipe: RecipeProps, multiplier: number) 
 
   const methodText = recipe.method.map((step, i) => `${i + 1}. ${extractTextFromNode(step.text)}`).join('\n');
   const notesText = recipe.notes && recipe.notes.length > 0
-    ? recipe.notes.map(n => `NOTA - ${n.title}: ${n.content}`).join('\n') 
+    ? recipe.notes.map(n => `NOTA - ${n.title}: ${extractTextFromNode(n.content)}`).join('\n') 
     : "Nenhuma nota técnica.";
 
   return `Você é o SousChef, assistente oficial do caderno de receitas El Guapo, especializado em panificação artesanal e confeitaria. O usuário está preparando ${recipe.title}. Aqui está o contexto completo:

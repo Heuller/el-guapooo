@@ -20,17 +20,41 @@ interface TimerState {
 }
 
 export const useTimerStore = create<TimerState>((set, get) => {
-  // Setup global tick
-  if (typeof window !== 'undefined') {
-    setInterval(() => {
-      get().tick();
+  // Setup global tick — only runs while there are active timers
+  let tickIntervalId: ReturnType<typeof setInterval> | null = null;
+
+  const startTicking = () => {
+    if (tickIntervalId !== null) return;
+    tickIntervalId = setInterval(() => {
+      const state = get();
+      const hasActive = state.timers.some(t => !t.paused && !t.done);
+      if (hasActive) {
+        state.tick();
+      } else {
+        if (tickIntervalId !== null) {
+          clearInterval(tickIntervalId);
+          tickIntervalId = null;
+        }
+      }
     }, 1000);
-  }
+  };
+
+  let audioCtx: AudioContext | null = null;
+
+  const getAudioContext = (): AudioContext => {
+    if (!audioCtx || audioCtx.state === 'closed') {
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      audioCtx = new AudioContextClass();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  };
 
   const playBell = () => {
     try {
-      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-      const ctx = new AudioContext();
+      const ctx = getAudioContext();
       const notes = [523.25, 659.25, 783.99];
       notes.forEach((freq, i) => {
         const osc = ctx.createOscillator();
@@ -52,53 +76,66 @@ export const useTimerStore = create<TimerState>((set, get) => {
   return {
     timers: [],
     
-    addTimer: (seconds, label) => set((state) => {
-      // Prevent duplicates by label, if it exists, toggle pause
-      const existing = state.timers.find(t => t.label === label);
-      if (existing) {
-        return {
-          timers: state.timers.map(t => 
-            t.label === label ? { ...t, paused: !t.paused } : t
-          )
-        };
-      }
+    addTimer: (seconds, label) => {
+      set((state) => {
+        // Prevent duplicates by label, if it exists, toggle pause
+        const existing = state.timers.find(t => t.label === label);
+        if (existing) {
+          return {
+            timers: state.timers.map(t => 
+              t.label === label ? { ...t, paused: !t.paused } : t
+            )
+          };
+        }
 
-      const newTimer: Timer = {
-        id: `t${Date.now()}`,
-        label,
-        totalSeconds: seconds,
-        remaining: seconds,
-        paused: false,
-        done: false,
-      };
-      return { timers: [...state.timers, newTimer] };
-    }),
+        const newTimer: Timer = {
+          id: `t${Date.now()}`,
+          label,
+          totalSeconds: seconds,
+          remaining: seconds,
+          paused: false,
+          done: false,
+        };
+        return { timers: [...state.timers, newTimer] };
+      });
+      startTicking();
+    },
 
     pauseTimer: (id) => set((state) => ({
       timers: state.timers.map(t => t.id === id ? { ...t, paused: true } : t)
     })),
 
-    resumeTimer: (id) => set((state) => ({
-      timers: state.timers.map(t => t.id === id ? { ...t, paused: false } : t)
-    })),
+    resumeTimer: (id) => {
+      set((state) => ({
+        timers: state.timers.map(t => t.id === id ? { ...t, paused: false } : t)
+      }));
+      startTicking();
+    },
 
     removeTimer: (id) => set((state) => ({
       timers: state.timers.filter(t => t.id !== id)
     })),
 
-    tick: () => set((state) => {
-      let hasDone = false;
-      const newTimers = state.timers.map(t => {
-        if (t.paused || t.done) return t;
-        const next = t.remaining - 1;
-        if (next <= 0) {
-          hasDone = true;
-          return { ...t, remaining: 0, done: true };
-        }
-        return { ...t, remaining: next };
+    tick: () => {
+      let shouldNotify = false;
+      set((state) => {
+        let hasDone = false;
+        const newTimers = state.timers.map(t => {
+          if (t.paused || t.done) return t;
+          const next = t.remaining - 1;
+          if (next <= 0) {
+            hasDone = true;
+            return { ...t, remaining: 0, done: true };
+          }
+          return { ...t, remaining: next };
+        });
+
+        if (hasDone) shouldNotify = true;
+
+        return { timers: newTimers };
       });
 
-      if (hasDone) {
+      if (shouldNotify) {
         playBell();
         confetti({
           particleCount: 100,
@@ -107,8 +144,6 @@ export const useTimerStore = create<TimerState>((set, get) => {
           colors: ['#9a521a', '#ccb594', '#5f4d43']
         });
       }
-
-      return { timers: newTimers };
-    }),
+    },
   };
 });

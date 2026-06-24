@@ -1,41 +1,23 @@
 import { useEffect, useRef } from 'react';
 import { useSearchStore } from '../store/useSearchStore';
 import { recipes } from '../data/recipes';
-
-const extractTextForRecipe = (recipe: any) => {
-  const parts = [recipe.title];
-  recipe.chips?.forEach((c: any) => parts.push(c.label));
-  recipe.meta?.forEach((m: any) => parts.push(`${m.label}: ${m.value}`));
-  recipe.ingredients?.forEach((g: any) => {
-    parts.push(g.name);
-    g.items.forEach((item: any) => parts.push(item.name));
-  });
-  recipe.method?.forEach((m: any) => parts.push(m.text));
-  recipe.notes?.forEach((n: any) => {
-    parts.push(n.title);
-    parts.push(n.content);
-  });
-  return parts.join(' ').toLowerCase();
-};
+import { extractTextForRecipe } from '../lib/recipeTextExtractor';
 
 export const useSemanticSearch = () => {
   const workerRef = useRef<Worker | null>(null);
   const { 
-    isReady, 
+    isReady,
     isFallback, 
     query, 
-    setReady, 
-    setProgress, 
     setFallback, 
-    setResults,
-    setIndexing
+    setResults
   } = useSearchStore();
 
   const debounceTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     if (!window.Worker) {
-      setFallback(true);
+      useSearchStore.getState().setFallback(true);
       return;
     }
 
@@ -47,21 +29,22 @@ export const useSemanticSearch = () => {
 
       worker.onmessage = (e) => {
         const { type, payload } = e.data;
+        const store = useSearchStore.getState();
         switch (type) {
           case 'PROGRESS':
-            setProgress(payload);
+            store.setProgress(payload);
             break;
           case 'READY':
-            setReady(true);
-            setProgress(100);
+            store.setReady(true);
+            store.setProgress(100);
             worker.postMessage({ type: 'INDEX', payload: recipes });
-            setIndexing(true);
+            store.setIndexing(true);
             break;
           case 'INDEXING_PROGRESS':
             break;
           case 'INDEX_COMPLETE':
-            setIndexing(false);
-            if (useSearchStore.getState().query) {
+            store.setIndexing(false);
+            if (store.query) {
               worker.postMessage({ type: 'SEARCH', payload: useSearchStore.getState().query });
             }
             break;
@@ -82,7 +65,7 @@ export const useSemanticSearch = () => {
       };
     } catch (e) {
       console.error("Worker initialization error:", e);
-      setFallback(true);
+      useSearchStore.getState().setFallback(true);
     }
   }, []);
 

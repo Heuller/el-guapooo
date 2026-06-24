@@ -1,4 +1,3 @@
-import React from "react";
 import { RecipeProps } from "../components/RecipeCard";
 
 export const recipes: RecipeProps[] = [

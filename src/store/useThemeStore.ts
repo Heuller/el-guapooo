@@ -16,6 +16,7 @@ export const useThemeStore = create<ThemeState>()(
     }),
     {
       name: 'el-guapo-theme',
+      partialize: (state) => ({ theme: state.theme }),
     }
   )
 );

@@ -7,12 +7,19 @@ export interface RecipeEmbedding {
   embedding: number[];
 }
 
+let cachedDB: IDBDatabase | null = null;
+
 export const initDB = (): Promise<IDBDatabase> => {
+  if (cachedDB) return Promise.resolve(cachedDB);
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve(request.result);
+    request.onsuccess = () => {
+      cachedDB = request.result;
+      cachedDB.onclose = () => { cachedDB = null; };
+      resolve(cachedDB);
+    };
 
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;

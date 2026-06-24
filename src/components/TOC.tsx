@@ -1,17 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Search, X, ArrowRight, BrainCircuit } from "lucide-react";
 import { useSearchStore } from "../store/useSearchStore";
 import { useSemanticSearch } from "../hooks/useSemanticSearch";
-
-const categories = [
-  { id: "pizzas", num: "01", name: "Pizzas", sub: "massas · molhos · montagem" },
-  { id: "focaccias", num: "02", name: "Focaccias", sub: "salgadas & doces" },
-  { id: "cucas", num: "03", name: "Cucas", sub: "massas & coberturas" },
-  { id: "bolos", num: "04", name: "Bolos", sub: "massas & recheios" },
-  { id: "quitanda", num: "05", name: "Quitanda", sub: "padaria brasileira artesanal" },
-  { id: "especiais", num: "06", name: "Especiais", sub: "receitas premium & sazonais" },
-];
+import { categories } from "../data/categories";
 
 export const TOC = () => {
   const { query, setQuery, isReady, progress, isFallback, isIndexing } = useSearchStore();

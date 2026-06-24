@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon, Leaf, ChefHat } from 'lucide-react';
 import { useKitchenStore } from '../store/useKitchenStore';
@@ -16,13 +16,15 @@ export const KitchenMode = () => {
 
   const currentRecipe = recipes.find(r => r.id === recipeId);
 
-  // Prevent scroll when active
   useEffect(() => {
     if (isActive) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isActive]);
 
   const handleNext = () => {
@@ -105,20 +107,23 @@ export const KitchenMode = () => {
                       {steps[currentStepIndex]}
                     </div>
                     {/* Render Timers */}
-                    {extractTimers(steps[currentStepIndex]).length > 0 && (
-                      <div className="mt-8 flex flex-wrap gap-3">
-                        {extractTimers(steps[currentStepIndex]).map((timer, i) => (
-                          <button
-                            key={i}
-                            onClick={() => useTimerStore.getState().addTimer(timer.seconds, `${recipeName} - Passo ${currentStepIndex + 1} (${timer.timeLabel})`)}
-                            className="flex items-center gap-2 bg-terra/20 hover:bg-terra/40 border border-terra/50 text-terra-light px-4 py-2 rounded-full text-sm font-medium transition-colors"
-                          >
-                            <TimerIcon size={16} />
-                            <span>ativar timer: {timer.timeLabel}</span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
+                    {(() => {
+                      const timers = extractTimers(steps[currentStepIndex]);
+                      return timers.length > 0 ? (
+                        <div className="mt-8 flex flex-wrap gap-3">
+                          {timers.map((timer, i) => (
+                            <button
+                              key={i}
+                              onClick={() => useTimerStore.getState().addTimer(timer.seconds, `${recipeName} - Passo ${currentStepIndex + 1} (${timer.timeLabel})`)}
+                              className="flex items-center gap-2 bg-terra/20 hover:bg-terra/40 border border-terra/50 text-terra-light px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                            >
+                              <TimerIcon size={16} />
+                              <span>ativar timer: {timer.timeLabel}</span>
+                            </button>
+                          ))}
+                        </div>
+                      ) : null;
+                    })()}
                   </div>
                 </div>
               </motion.div>

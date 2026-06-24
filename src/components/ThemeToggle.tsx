@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sun, Moon, Monitor } from 'lucide-react';
 import { useThemeStore } from '../store/useThemeStore';
 import { motion, AnimatePresence } from 'framer-motion';
