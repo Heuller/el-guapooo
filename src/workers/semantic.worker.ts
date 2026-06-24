@@ -1,3 +1,4 @@
+// @ts-ignore
 import { pipeline, env } from '@xenova/transformers';
 import { getEmbedding, saveEmbedding, getAllEmbeddings } from '../utils/idb';
 
@@ -49,7 +50,7 @@ const indexRecipes = async (recipes: any[]) => {
       if (!existing) {
         const text = extractTextForRecipe(recipe);
         const output = await featureExtractionPipeline(text, { pooling: 'mean', normalize: true });
-        const embedding = Array.from(output.data);
+        const embedding = Array.from(output.data) as number[];
         await saveEmbedding({ id: recipe.id, embedding });
       }
       indexedCount++;
