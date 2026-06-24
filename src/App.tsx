@@ -16,6 +16,12 @@ const categories = [
   { id: "especiais", num: "06", name: "Especiais", sub: "receitas premium & sazonais", filter: (id: string) => id.includes('panetone') || id.includes('banana-bread') },
 ];
 
+const getTypeWeight = (id: string) => {
+  if (id.includes('recheio') || id.includes('brigadeiro')) return 2;
+  if (id.includes('crumble') || id.includes('cobertura')) return 3;
+  return 1;
+};
+
 function App() {
   return (
     <div className="bg-paper min-h-screen text-ink font-body selection:bg-terra/20">
@@ -28,7 +34,9 @@ function App() {
         
         <div className="max-w-5xl mx-auto px-8 pb-32">
           {categories.map((cat) => {
-            const catRecipes = recipes.filter(r => cat.filter(r.id));
+            const catRecipes = recipes
+              .filter(r => cat.filter(r.id))
+              .sort((a, b) => getTypeWeight(a.id) - getTypeWeight(b.id));
             if (catRecipes.length === 0) return null;
 
             return (

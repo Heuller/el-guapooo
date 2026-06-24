@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, Info, Maximize2, Scale, ChefHat } from "lucide-react";
+import { Plus, Minus, Info, Maximize2, Scale, ChefHat, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { useRecipeScaler } from "../hooks/useRecipeScaler";
 import { useKitchenStore } from "../store/useKitchenStore";
@@ -40,6 +40,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { multiplier, setMultiplier, unitMode, setUnitMode, scaleText } = useRecipeScaler(1);
   const { openKitchenMode } = useKitchenStore();
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const handleOpenKitchenMode = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -112,8 +113,13 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
               
               {/* Recipe Image */}
               {recipe.image && (
-                <div className="mt-8 rounded-2xl overflow-hidden border border-line shadow-sm relative aspect-[21/9] bg-paper-light">
-                  <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover" />
+                <div className="mt-8 rounded-2xl overflow-hidden border border-line shadow-sm relative bg-paper-light">
+                  <img 
+                    src={recipe.image} 
+                    alt={recipe.title} 
+                    className="w-full h-auto max-h-[500px] object-cover cursor-pointer hover:opacity-95 transition-opacity" 
+                    onClick={() => dialogRef.current?.showModal()}
+                  />
                 </div>
               )}
 
@@ -246,6 +252,31 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <dialog
+        ref={dialogRef}
+        className="bg-transparent backdrop:bg-black/90 p-0 m-auto max-w-full max-h-full overflow-hidden outline-none"
+        onClick={(e) => {
+          if (e.target === dialogRef.current) dialogRef.current?.close();
+        }}
+      >
+        <div className="relative flex items-center justify-center w-screen h-screen p-4 md:p-12" onClick={(e) => {
+          if (e.target === e.currentTarget) dialogRef.current?.close();
+        }}>
+          <button 
+            onClick={() => dialogRef.current?.close()}
+            className="absolute top-6 right-6 text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition-colors z-50 focus:outline-none"
+            aria-label="Close"
+          >
+            <X size={24} />
+          </button>
+          <img 
+            src={recipe.image} 
+            alt={recipe.title} 
+            className="max-w-full max-h-full object-contain drop-shadow-2xl rounded-sm"
+          />
+        </div>
+      </dialog>
     </article>
   );
 };
