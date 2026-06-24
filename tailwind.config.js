@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -11,10 +12,14 @@ export default {
           DEFAULT: "#ede4d1",
           light: "#f6efe3",
           cream: "#faf5ec",
+          invert: "#1a1409",
+          "invert-light": "#221b11",
         },
         ink: {
           DEFAULT: "#15110d",
           soft: "#5f4d43",
+          invert: "#ede4d1",
+          "invert-soft": "#ccb594",
         },
         terra: {
           DEFAULT: "#9a521a",
@@ -25,6 +30,7 @@ export default {
           DEFAULT: "#ccb594",
           dark: "#907c65",
           faint: "rgba(204, 181, 148, 0.4)",
+          invert: "#5f4d43",
         },
         sand: "#e4d8c4",
         dark: {

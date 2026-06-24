@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-paper text-ink font-body;
+    @apply bg-paper text-ink font-body dark:bg-paper-invert dark:text-ink-invert transition-colors duration-500;
     line-height: 1.55;
     overflow-x: hidden;
   }

@@ -19,7 +19,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-            className="font-disp text-[clamp(2.8rem,6.5vw,5.5rem)] font-light italic tracking-[0.18em] text-ink-soft"
+            className="font-disp text-[clamp(2.8rem,6.5vw,5.5rem)] font-light italic tracking-[0.18em] text-ink-soft dark:text-ink-invert-soft"
           >
             El
           </motion.span>
@@ -27,7 +27,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-disp text-[clamp(5.5rem,17vw,15rem)] font-semibold tracking-[-0.03em] text-ink leading-[0.82]"
+            className="font-disp text-[clamp(5.5rem,17vw,15rem)] font-semibold tracking-[-0.03em] text-ink dark:text-ink-invert leading-[0.82]"
           >
             Guapo
           </motion.span>
@@ -39,18 +39,18 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 1.1, ease: [0.4, 0, 0.2, 1] }}
           className="flex items-center gap-6 w-[clamp(180px,38vw,480px)] my-10"
         >
-          <span className="flex-1 h-[1px] bg-line" />
+          <span className="flex-1 h-[1px] bg-line dark:bg-line-invert" />
           <span className="text-terra text-sm">✦</span>
-          <span className="flex-1 h-[1px] bg-line" />
+          <span className="flex-1 h-[1px] bg-line dark:bg-line-invert" />
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.3 }}
-          className="font-disp text-[clamp(0.95rem,1.8vw,1.25rem)] font-light italic text-ink-soft tracking-[0.06em]"
+          className="font-disp text-[clamp(0.95rem,1.8vw,1.25rem)] font-light italic text-ink-soft dark:text-ink-invert-soft tracking-[0.06em]"
         >
-          Feito com o coração, para surpreender o seu <span className="text-terra">♥</span>
+          Feito com o coração, para surpreender o seu <span className="text-terra dark:text-terra-light">♥</span>
         </motion.p>
       </div>
 
@@ -60,7 +60,7 @@ export const Hero = () => {
         transition={{ duration: 1, delay: 2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
-        <span className="text-[0.6rem] tracking-[0.38em] uppercase text-ink-soft">
+        <span className="text-[0.6rem] tracking-[0.38em] uppercase text-ink-soft dark:text-ink-invert-soft">
           Explorar
         </span>
         <motion.span

@@ -4,6 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: '/el-guapooo/',
+  optimizeDeps: {
+    exclude: ['@xenova/transformers']
+  },
   plugins: [
     react(),
     VitePWA({

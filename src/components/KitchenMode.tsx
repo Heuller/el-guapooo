@@ -1,20 +1,25 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon, Leaf, ChefHat } from 'lucide-react';
 import { useKitchenStore } from '../store/useKitchenStore';
 import { useTimerStore } from '../store/useTimerStore';
+import { recipes } from '../data/recipes';
+import { handleAskSousChef } from '../utils/sousChef';
 import { extractTimers } from '../lib/extractTimers';
 import { cn } from '../lib/utils';
 import confetti from 'canvas-confetti';
+import { useWakeLock } from '../hooks/useWakeLock';
 
 export const KitchenMode = () => {
-  const { isActive, recipeName, steps, currentStepIndex, closeKitchenMode, nextStep, prevStep } = useKitchenStore();
+  const { isActive, recipeName, steps, currentStepIndex, closeKitchenMode, nextStep, prevStep, lowPowerMode, toggleLowPowerMode, recipeId, multiplier } = useKitchenStore();
+  useWakeLock();
+
+  const currentRecipe = recipes.find(r => r.id === recipeId);
 
   // Prevent scroll when active
   useEffect(() => {
     if (isActive) {
       document.body.style.overflow = "hidden";
-      // Wake Lock could be implemented here to prevent screen from sleeping
     } else {
       document.body.style.overflow = "";
     }
@@ -57,12 +62,27 @@ export const KitchenMode = () => {
                 {recipeName}
               </h2>
             </div>
-            <button
-              onClick={closeKitchenMode}
-              className="p-3 text-line-dark hover:text-terra transition-colors rounded-full hover:bg-dark-warm"
-            >
-              <X size={28} strokeWidth={1.5} />
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={toggleLowPowerMode}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-colors border",
+                  lowPowerMode 
+                    ? "bg-terra/20 text-terra-light border-terra/50" 
+                    : "text-line-dark border-transparent hover:bg-dark-warm hover:text-sand"
+                )}
+                title="Modo Economia de Energia"
+              >
+                <Leaf size={16} />
+                <span className="hidden md:inline">Eco</span>
+              </button>
+              <button
+                onClick={closeKitchenMode}
+                className="p-3 text-line-dark hover:text-terra transition-colors rounded-full hover:bg-dark-warm"
+              >
+                <X size={28} strokeWidth={1.5} />
+              </button>
+            </div>
           </header>
 
           {/* Main Content Area */}
@@ -108,6 +128,18 @@ export const KitchenMode = () => {
           {/* Footer Controls */}
           <footer className="p-6 border-t border-dark-warm bg-dark-warm/30 flex items-center justify-between">
             <div className="flex gap-4">
+              {currentRecipe && (
+                 <button
+                   onClick={() => {
+                     if (!currentRecipe) return;
+                     handleAskSousChef(currentRecipe, multiplier);
+                   }}
+                   className="p-3 text-terra-light border border-terra/30 hover:bg-terra/20 transition-colors rounded-full"
+                   title="SousChef IA • O contexto da receita é compartilhado apenas com o assistente que você escolher"
+                 >
+                   <ChefHat size={24} strokeWidth={1.5} />
+                 </button>
+              )}
               <button
                 onClick={prevStep}
                 disabled={currentStepIndex === 0}

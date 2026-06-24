@@ -4,6 +4,7 @@ import { Plus, Minus, Info, Maximize2, Scale, ChefHat, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { useRecipeScaler } from "../hooks/useRecipeScaler";
 import { useKitchenStore } from "../store/useKitchenStore";
+import { handleAskSousChef } from "../utils/sousChef";
 
 export interface Ingredient {
   name: string;
@@ -44,7 +45,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
 
   const handleOpenKitchenMode = (e: React.MouseEvent) => {
     e.stopPropagation();
-    openKitchenMode(recipe.title, recipe.method.map(m => m.text));
+    openKitchenMode(recipe.title, recipe.method.map(m => m.text), recipe.id, multiplier);
   };
 
 
@@ -52,7 +53,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
     <article
       id={recipe.id}
       className={cn(
-        "border border-line mb-6 bg-gradient-to-b from-paper-light to-paper rounded-[22px] overflow-hidden shadow-[0_24px_70px_rgba(27,18,12,0.08)] transition-colors duration-500",
+        "border border-line dark:border-line-invert mb-6 bg-gradient-to-b from-paper-light dark:from-paper-invert-light to-paper dark:to-paper-invert rounded-[22px] overflow-hidden shadow-[0_24px_70px_rgba(27,18,12,0.08)] transition-colors duration-500",
         isOpen ? "border-l-4 border-l-terra" : "border-l-4 border-l-transparent"
       )}
     >
@@ -62,7 +63,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
         aria-expanded={isOpen}
       >
         <div className="flex-1 min-w-0">
-          <span role="heading" aria-level={3} className="block font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink group-hover:text-terra transition-colors pr-4">
+          <span role="heading" aria-level={3} className="block font-disp text-3xl md:text-4xl font-medium italic leading-tight text-ink dark:text-ink-invert group-hover:text-terra dark:group-hover:text-terra-light transition-colors pr-4">
             {recipe.title}
           </span>
           <div className="flex flex-wrap gap-2 mt-3">
@@ -70,10 +71,10 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
               <span
                 key={i}
                 className={cn(
-                  "text-[0.58rem] tracking-[0.14em] uppercase px-3 py-1 border rounded-md whitespace-nowrap",
+                  "text-[0.58rem] tracking-[0.14em] uppercase px-3 py-1 border rounded-md whitespace-nowrap transition-colors duration-500",
                   chip.accent
                     ? "border-terra text-terra bg-terra/5"
-                    : "border-line text-ink-soft bg-paper-cream/60"
+                    : "border-line dark:border-line-invert text-ink-soft dark:text-ink-invert-soft bg-paper-cream/60 dark:bg-paper-invert-light"
                 )}
               >
                 {chip.label}
@@ -85,17 +86,17 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
         <div className="hidden md:flex gap-10 flex-shrink-0">
           {recipe.meta.map((m, i) => (
             <div key={i} className="text-right">
-              <span className="block text-[0.57rem] tracking-[0.22em] uppercase text-ink-soft mb-1">
+              <span className="block text-[0.57rem] tracking-[0.22em] uppercase text-ink-soft dark:text-ink-invert-soft mb-1 transition-colors duration-500">
                 {m.label}
               </span>
-              <span className="font-disp text-lg font-medium text-ink">
+              <span className="font-disp text-lg font-medium text-ink dark:text-ink-invert transition-colors duration-500">
                 {m.value}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="w-10 h-10 flex-shrink-0 border border-line rounded-md flex items-center justify-center text-ink-soft bg-paper-light">
+        <div className="w-10 h-10 flex-shrink-0 border border-line dark:border-line-invert rounded-md flex items-center justify-center text-ink-soft dark:text-ink-invert-soft bg-paper-light dark:bg-paper-invert-light transition-colors duration-500">
           {isOpen ? <Minus size={20} strokeWidth={1} /> : <Plus size={20} strokeWidth={1} />}
         </div>
       </button>
@@ -113,7 +114,7 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
               
               {/* Recipe Image */}
               {recipe.image && (
-                <div className="mt-8 rounded-2xl overflow-hidden border border-line shadow-sm relative bg-paper-light">
+                <div className="mt-8 rounded-2xl overflow-hidden border border-line dark:border-line-invert shadow-sm relative bg-paper-light dark:bg-paper-invert-light transition-colors duration-500">
                   <img 
                     src={recipe.image} 
                     alt={recipe.title} 
@@ -124,49 +125,66 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
               )}
 
               {/* Toolbar Premium */}
-              <div className="flex flex-wrap items-center justify-between gap-4 mt-8 p-2 bg-paper rounded-2xl border border-line shadow-sm">
-                
-                {/* Scale Controls */}
-                <div className="flex items-center bg-paper-light rounded-xl p-1 border border-line">
-                  <span className="text-[0.6rem] uppercase tracking-widest text-ink-soft px-3 hidden sm:inline">Escala</span>
-                  {[0.5, 1, 1.5, 2].map(m => (
+              <div className="flex flex-col gap-2 mt-8">
+                <div className="flex flex-wrap items-center justify-between gap-4 p-2 bg-paper dark:bg-paper-invert rounded-2xl border border-line dark:border-line-invert shadow-sm transition-colors duration-500">
+                  
+                  {/* Scale Controls */}
+                  <div className="flex items-center bg-paper-light dark:bg-paper-invert-light rounded-xl p-1 border border-line dark:border-line-invert transition-colors duration-500">
+                    <span className="text-[0.6rem] uppercase tracking-widest text-ink-soft dark:text-ink-invert-soft px-3 hidden sm:inline transition-colors duration-500">Escala</span>
+                    {[0.5, 1, 1.5, 2].map(m => (
+                      <button
+                        key={m}
+                        onClick={() => setMultiplier(m)}
+                        className={cn(
+                          "px-4 py-2 rounded-lg text-sm transition-all font-disp italic font-medium duration-500",
+                          multiplier === m 
+                            ? "bg-terra text-white shadow-md" 
+                            : "text-ink dark:text-ink-invert hover:bg-line dark:hover:bg-line-invert"
+                        )}
+                      >
+                        {m === 0.5 ? '½' : m}×
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Unit Toggle & Kitchen Mode */}
+                  <div className="flex items-center gap-2">
                     <button
-                      key={m}
-                      onClick={() => setMultiplier(m)}
+                      onClick={(e) => { e.stopPropagation(); handleAskSousChef(recipe, multiplier); }}
+                      className="flex items-center gap-2 px-4 py-2 bg-terra/10 border border-terra/30 text-terra rounded-xl text-xs uppercase tracking-widest hover:bg-terra/20 transition-colors shadow-sm"
+                    >
+                      <ChefHat size={16} strokeWidth={2} />
+                      <span className="hidden sm:inline">SousChef IA</span>
+                    </button>
+
+                    <button
+                      onClick={() => setUnitMode(prev => prev === 'grams' ? 'home' : 'grams')}
                       className={cn(
-                        "px-4 py-2 rounded-lg text-sm transition-all font-disp italic font-medium",
-                        multiplier === m 
-                          ? "bg-terra text-white shadow-md" 
-                          : "text-ink hover:bg-line"
+                        "flex items-center gap-2 px-4 py-2 rounded-xl text-xs uppercase tracking-widest transition-colors duration-500 border",
+                        unitMode === 'home'
+                          ? "bg-ink dark:bg-ink-invert border-ink dark:border-ink-invert text-paper dark:text-paper-invert"
+                          : "bg-paper-light dark:bg-paper-invert-light border-line dark:border-line-invert text-ink dark:text-ink-invert hover:border-ink-soft dark:hover:border-ink-invert-soft"
                       )}
                     >
-                      {m === 0.5 ? '½' : m}×
+                      <Scale size={14} strokeWidth={2} />
+                      <span className="hidden sm:inline">{unitMode === 'home' ? 'Caseiro' : 'Profissional'}</span>
                     </button>
-                  ))}
+
+                    <button
+                      onClick={handleOpenKitchenMode}
+                      className="flex items-center gap-2 px-5 py-2 bg-terra border border-terra text-white rounded-xl text-xs uppercase tracking-widest hover:bg-terra-dark hover:border-terra-dark transition-colors shadow-sm"
+                    >
+                      <ChefHat size={16} strokeWidth={2} />
+                      <span className="hidden sm:inline">Modo Cozinha</span>
+                    </button>
+                  </div>
                 </div>
 
-                {/* Unit Toggle & Kitchen Mode */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setUnitMode(prev => prev === 'grams' ? 'home' : 'grams')}
-                    className={cn(
-                      "flex items-center gap-2 px-4 py-2 rounded-xl text-xs uppercase tracking-widest transition-colors border",
-                      unitMode === 'home'
-                        ? "bg-ink border-ink text-paper"
-                        : "bg-paper-light border-line text-ink hover:border-ink-soft"
-                    )}
-                  >
-                    <Scale size={14} strokeWidth={2} />
-                    <span className="hidden sm:inline">{unitMode === 'home' ? 'Caseiro' : 'Profissional'}</span>
-                  </button>
-
-                  <button
-                    onClick={handleOpenKitchenMode}
-                    className="flex items-center gap-2 px-5 py-2 bg-terra border border-terra text-white rounded-xl text-xs uppercase tracking-widest hover:bg-terra-dark hover:border-terra-dark transition-colors shadow-sm"
-                  >
-                    <ChefHat size={16} strokeWidth={2} />
-                    <span className="hidden sm:inline">Modo Cozinha</span>
-                  </button>
+                {/* Rótulo de Privacidade */}
+                <div className="text-center w-full px-2">
+                  <span className="text-[0.6rem] text-ink-soft/70 dark:text-ink-invert-soft/70">
+                    🔒 O contexto da receita é compartilhado apenas com o assistente que você escolher.
+                  </span>
                 </div>
               </div>
 
@@ -179,18 +197,18 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
                   
                   {recipe.ingredients.map((group, gIdx) => (
                     <div key={gIdx} className="mb-8 last:mb-0">
-                      <h5 className="font-disp italic text-xl text-ink-soft mb-4">{group.name}</h5>
+                      <h5 className="font-disp italic text-xl text-ink-soft dark:text-ink-invert-soft mb-4 transition-colors duration-500">{group.name}</h5>
                       <ul className="space-y-4">
                         {group.items.map((item, iIdx) => (
                           <li key={iIdx}>
                             <div className="flex justify-between items-baseline mb-2">
-                              <span className="text-sm font-medium text-ink">
+                              <span className="text-sm font-medium text-ink dark:text-ink-invert transition-colors duration-500">
                                 {item.name}
                                 {item.pct !== undefined && (
-                                  <span className="text-xs text-ink-soft font-light ml-2">{item.pct}%</span>
+                                  <span className="text-xs text-ink-soft dark:text-ink-invert-soft font-light ml-2 transition-colors duration-500">{item.pct}%</span>
                                 )}
                               </span>
-                              <span className="text-sm font-disp font-medium text-terra bg-terra/5 px-2 py-0.5 rounded">
+                              <span className="text-sm font-disp font-medium text-terra bg-terra/5 px-2 py-0.5 rounded transition-colors duration-500">
                                 {scaleText(item.qty)}
                               </span>
                             </div>
@@ -220,10 +238,10 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
                   <div className="space-y-8">
                     {recipe.method.map((step, sIdx) => (
                       <div key={sIdx} className="flex gap-4">
-                        <span className="font-disp text-2xl text-line-dark italic leading-none shrink-0 mt-1">
+                        <span className="font-disp text-2xl text-line-dark dark:text-line-invert italic leading-none shrink-0 mt-1 transition-colors duration-500">
                           {String(sIdx + 1).padStart(2, '0')}
                         </span>
-                        <p className="text-sm text-ink-soft leading-relaxed">
+                        <p className="text-sm text-ink-soft dark:text-ink-invert-soft leading-relaxed transition-colors duration-500">
                           {scaleText(step.text)}
                         </p>
                       </div>
@@ -233,15 +251,15 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
               </div>
 
               {recipe.notes && recipe.notes.length > 0 && (
-                <div className="mt-12 bg-sand/30 rounded-xl p-8 border border-line-faint">
+                <div className="mt-12 bg-sand/30 dark:bg-paper-invert-light/30 rounded-xl p-8 border border-line-faint dark:border-line-invert transition-colors duration-500">
                   <h4 className="text-xs tracking-[0.25em] uppercase text-terra-light mb-6 flex items-center gap-2">
                     <Info size={14} /> Notas Técnicas
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {recipe.notes.map((note, nIdx) => (
                       <div key={nIdx} className="border-l-2 border-terra/30 pl-4">
-                        <span className="block text-sm font-disp italic text-ink font-medium mb-1">{note.title}</span>
-                        <span className="text-[0.8rem] text-ink-soft leading-relaxed">{note.content}</span>
+                        <span className="block text-sm font-disp italic text-ink dark:text-ink-invert font-medium mb-1 transition-colors duration-500">{note.title}</span>
+                        <span className="text-[0.8rem] text-ink-soft dark:text-ink-invert-soft leading-relaxed transition-colors duration-500">{note.content}</span>
                       </div>
                     ))}
                   </div>
