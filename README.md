@@ -1,33 +1,53 @@
-# El-Guapo
-Livro de receitas digital do El Guapo
+# El Guapo - Caderno de Receitas Artesanais 🍞🍰
 
-## Sobre
-El Guapo é um caderno de receitas artesanais focado em panificação e confeitaria, com uma interface editorial pensada para trabalhar na cozinha.
+El Guapo é um caderno de receitas digital com design editorial premium, focado em panificação de fermentação natural, confeitaria avançada e ingredientes autorais. 
 
-## Novas funcionalidades adicionadas
-- Despensa local com cadastro rápido de ingredientes disponíveis.
-- Lista de compras dinâmica com categorias e checagem automática da despensa.
-- Sugestões de substituições de ingredientes chave quando algo está faltando.
-- Escalonamento de receitas com controles precisos de ½×, 1×, 1,5×, 2× e 3×.
-- Modo Cozinha com leitura de passos por voz e integração segura com temporizadores automáticos.
-- Notificações audíveis e temporizadores contextuais em etapas que mencionam tempo.
-- PWA habilitado com service worker para suporte offline e instalação.
+Construído para rodar em tablets, smartphones ou desktops, oferece uma experiência impecável diretamente na cozinha, eliminando telas poluídas e auxiliando nas etapas com cronômetros e calculadoras automatizadas.
 
-## Como usar
-1. Abra o app localmente ou via GitHub Pages.
-2. Use o botão `Despensa` para adicionar ingredientes que você já tem.
-3. Em uma receita, clique em `Lista de Compras` para gerar a lista categorizada.
-4. Itens faltantes aparecem destacados e podem ser adicionados à despensa.
-5. Use os botões de escala para ajustar as quantidades da receita.
-6. Ative `Modo Foco na Cozinha` para ver os passos um a um.
-7. No modo cozinha, pressione `Voz: ON` para ouvir cada passo e receba alertas quando os temporizadores terminarem.
+## 🚀 Tecnologias e Arquitetura (Stack Moderna)
+Este projeto foi recentemente migrado e reestruturado para um ecossistema front-end de alto desempenho:
+- **Framework Core:** React 18 + TypeScript
+- **Build Tool:** Vite (rápido e otimizado)
+- **Estilização e UI:** Tailwind CSS (com design system artesanal e paleta 'terracota')
+- **Animações:** Framer Motion (transições fluídas e micro-interações imersivas)
+- **Ícones:** Lucide React
+- **Gerenciamento de Estado:** Zustand (para o dock de temporizadores e modo cozinha)
+- **PWA (Progressive Web App):** Suporte nativo offline usando `vite-plugin-pwa` e registro de Service Workers.
 
-## Local development
+## ✨ Principais Funcionalidades
+- **Sistema de Escala Inteligente:** Calcule na hora o rendimento da receita com multiplicadores exatos (½×, 1×, 1,5×, 2×, etc.), ajustando fórmulas e a porcentagem do padeiro automaticamente.
+- **Modo Cozinha (Foco Absoluto):** Interface imersiva que mostra os passos da receita um a um em formato maximizado, ideal para mãos sujas na cozinha. Bloqueia distrações e rolagem da tela.
+- **TimerDock Integrado:** Múltiplos temporizadores que rodam independentes no background da aplicação. Um dock flutuante persistente te lembra quando é hora de fazer a dobra na massa ou retirar o bolo do forno.
+- **Auditoria Rigorosa de UI/UX:** Estrutura otimizada sem colisões de z-index (anti-bleeding) e design 100% livre de vazamentos de layout (overflow), testado para iPhone SE até SmartTVs.
+
+## 💻 Desenvolvimento Local
+
+Para rodar o projeto localmente:
+
+1. Clone o repositório ou navegue até a pasta:
 ```bash
-cd /workspaces/El-Guapo
-python3 -m http.server 8000
+cd el-guapooo
 ```
-Acesse `http://127.0.0.1:8000` no navegador.
 
-## Deploy
-O código foi enviado para o branch `main` do repositório GitHub e pode ser publicado usando GitHub Pages.
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+4. Acesse no navegador em `http://localhost:5173`
+
+## 📦 Build e Deploy
+
+Para gerar os arquivos otimizados de produção (PWA incluído):
+```bash
+npm run build
+```
+O diretório `/dist` gerado conterá tudo que você precisa para subir o site no GitHub Pages, Vercel ou Netlify.
+
+## 🎨 Visual Identity
+*Feito com o coração, para surpreender o seu ♥*
