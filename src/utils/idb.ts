@@ -1,4 +1,4 @@
-const DB_NAME = 'el-guapo-semantic';
+const DB_NAME = 'el-guapo-semantic-v2';
 const DB_VERSION = 1;
 const STORE_NAME = 'embeddings';
 

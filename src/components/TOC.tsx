@@ -29,7 +29,7 @@ export const TOC = () => {
         <div className="relative flex items-center">
           <Search className="absolute left-4 text-line-dark dark:text-line-invert w-5 h-5 transition-colors duration-500" strokeWidth={1.5} />
           <input
-            type="search"
+            type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Buscar por ingrediente, método..."
