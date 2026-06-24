@@ -83,20 +83,20 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
           </div>
         </div>
 
-        <div className="hidden md:flex gap-10 flex-shrink-0">
+        <div className="hidden md:flex gap-8 lg:gap-10 flex-shrink-0 max-w-[40%] justify-end">
           {recipe.meta.map((m, i) => (
-            <div key={i} className="text-right">
+            <div key={i} className="text-right flex flex-col items-end">
               <span className="block text-[0.57rem] tracking-[0.22em] uppercase text-ink-soft dark:text-ink-invert-soft mb-1 transition-colors duration-500">
                 {m.label}
               </span>
-              <span className="font-disp text-lg font-medium text-ink dark:text-ink-invert transition-colors duration-500">
+              <span className="font-disp text-lg font-medium text-ink dark:text-ink-invert transition-colors duration-500 max-w-[180px] leading-tight">
                 {m.value}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="w-10 h-10 flex-shrink-0 border border-line dark:border-line-invert rounded-md flex items-center justify-center text-ink-soft dark:text-ink-invert-soft bg-paper-light dark:bg-paper-invert-light transition-colors duration-500">
+        <div className="w-10 h-10 flex-shrink-0 border border-line dark:border-line-invert rounded-md flex items-center justify-center text-ink-soft dark:text-ink-invert-soft bg-paper-light dark:bg-paper-invert-light transition-colors duration-500 ml-4">
           {isOpen ? <Minus size={20} strokeWidth={1} /> : <Plus size={20} strokeWidth={1} />}
         </div>
       </button>
