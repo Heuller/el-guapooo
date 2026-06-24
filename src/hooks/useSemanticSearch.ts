@@ -48,9 +48,27 @@ export const useSemanticSearch = () => {
               worker.postMessage({ type: 'SEARCH', payload: useSearchStore.getState().query });
             }
             break;
-          case 'SEARCH_RESULTS':
-            setResults(payload);
+          case 'SEARCH_RESULTS': {
+            const currentQuery = useSearchStore.getState().query.toLowerCase();
+            const textMatches = recipes
+              .filter(r => extractTextForRecipe(r).includes(currentQuery))
+              .map(r => ({ id: r.id, score: 1.0 }));
+            
+            const semanticIds = new Set(payload.map((r: any) => r.id));
+            const merged = [...payload];
+            
+            textMatches.forEach(tm => {
+              if (!semanticIds.has(tm.id)) {
+                merged.push(tm);
+              } else {
+                const existing = merged.find(m => m.id === tm.id);
+                if (existing) existing.score += 0.5; 
+              }
+            });
+            
+            setResults(merged.sort((a, b) => b.score - a.score));
             break;
+          }
           case 'ERROR':
             console.error("Worker error:", payload);
             setFallback(true);
