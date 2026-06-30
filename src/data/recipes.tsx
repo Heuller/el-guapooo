@@ -20,24 +20,24 @@ export const recipes: RecipeProps[] = [
       {
         name: "Base (100% = 500g farinha)",
         items: [
-          { name: "Farinha W300+ ou Tipo 1 Forte", qty: "500g", pct: 100,
-            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } }
-          },
-          { name: "Água", qty: "325g", pct: 65,
-            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
-          },
-          { name: "Fermento biológico fresco", qty: "5g", pct: 1,
-            nutrition: { calories: 105, carbs: 18.1, proteins: 8.4, totalFats: 1.9, saturatedFats: 0.3, fibers: 2.7, sodium: 51 , nutrition: { calories: 105, carbs: 18.1, proteins: 8.4, totalFats: 1.9, saturatedFats: 0.3, fibers: 2.7, sodium: 51 , nutrition: { calories: 105, carbs: 18.1, proteins: 8.4, totalFats: 1.9, saturatedFats: 0.3, fibers: 2.7, sodium: 51 } } }
-          },
-          { name: "Mel ou açúcar", qty: "10g", pct: 2,
-            nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } }
-          },
-          { name: "Sal refinado", qty: "12g", pct: 2.4,
-            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } }
-          },
-          { name: "Azeite de oliva", qty: "20g", pct: 4,
-            nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 } } }
-          },
+          { 
+            name: "Farinha W300+ ou Tipo 1 Forte", qty: "500g", pct: 100
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          { 
+            name: "Água", qty: "325g", pct: 65
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { 
+            name: "Fermento biológico fresco", qty: "5g", pct: 1
+          , nutrition: { calories: 105, carbs: 18.1, proteins: 8.4, totalFats: 1.9, saturatedFats: 0.3, fibers: 2.7, sodium: 51 } },
+          { 
+            name: "Mel ou açúcar", qty: "10g", pct: 2
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          { 
+            name: "Sal refinado", qty: "12g", pct: 2.4
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          { 
+            name: "Azeite de oliva", qty: "20g", pct: 4
+          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 } },
         ],
       },
     ],
@@ -81,42 +81,42 @@ export const recipes: RecipeProps[] = [
       {
         name: "Tangzhong",
         items: [
-          { name: "Farinha de trigo", qty: "50g",
-            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } }
-          },
-          { name: "Leite integral", qty: "250g",
-            nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } }
-          },
+          { 
+            name: "Farinha de trigo", qty: "50g"
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          { 
+            name: "Leite integral", qty: "250g"
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
         ],
       },
       {
         name: "Massa Final (100% = 600g farinha)",
         items: [
-          { name: "Farinha de trigo média/forte", qty: "550g", pct: 100,
-            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } }
-          },
-          { name: "Leite integral gelado", qty: "260g", pct: 85,
-            nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } }
-          },
-          { name: "Tangzhong preparado", qty: "todo", pct: undefined   }, // sem nutrição = 0g
-          { name: "Gemas", qty: "3 un.", pct: 9,
-            nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 , weightInGrams: 54, nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } } }
-          },
-          { name: "Açúcar refinado", qty: "42g", pct: 7,
-            nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } }
-          },
-          { name: "Manteiga sem sal", qty: "70g", pct: 11.6,
-            nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } }
-          },
-          { name: "Azeite de oliva", qty: "40g", pct: 6.6,
-            nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 } } }
-          },
-          { name: "Sal refinado", qty: "12g", pct: 2,
-            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } }
-          },
-          { name: "Fermento biológico seco", qty: "2g", pct: 0.3,
-            nutrition: { calories: 325, carbs: 41, proteins: 40, totalFats: 5.5, saturatedFats: 0, fibers: 27, sodium: 51 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } } }
-          },
+          { 
+            name: "Farinha de trigo média/forte", qty: "550g", pct: 100
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          { 
+            name: "Leite integral gelado", qty: "260g", pct: 85
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          { name: "Tangzhong preparado", qty: "todo", pct: undefined  }, // sem nutrição = 0g
+          { 
+            name: "Gemas", qty: "3 un.", pct: 9
+          , weightInGrams: 54, nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } },
+          { 
+            name: "Açúcar refinado", qty: "42g", pct: 7
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          { 
+            name: "Manteiga sem sal", qty: "70g", pct: 11.6
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          { 
+            name: "Azeite de oliva", qty: "40g", pct: 6.6
+          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 } },
+          { 
+            name: "Sal refinado", qty: "12g", pct: 2
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          { 
+            name: "Fermento biológico seco", qty: "2g", pct: 0.3
+          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } },
         ],
       },
     ],
@@ -139,46 +139,70 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Tangzhong (retirado da fórmula principal)",
         items: [
-          { name: "Farinha de trigo", qty: "40g",
+          {
+            name: "Farinha de trigo",
+            qty: "40g",
             pct: 600
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Leite integral", qty: "200g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Leite integral",
+            qty: "200g",
             pct: 480
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } }
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } }
         ]
       },
       {
         name: "B. Massa Principal (100% = 600g farinha)",
         items: [
-          { name: "Farinha de trigo média/forte", qty: "600g",
+          {
+            name: "Farinha de trigo média/forte",
+            qty: "600g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Leite integral", qty: "480g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Leite integral",
+            qty: "480g",
             pct: 80
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Ovos inteiros", qty: "100g",
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Ovos inteiros",
+            qty: "100g",
             pct: 16.7
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Gemas", qty: "36g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Gemas",
+            qty: "36g",
             pct: 6
-          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } } },
-          { name: "Açúcar refinado", qty: "120g",
+          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } },
+          {
+            name: "Açúcar refinado",
+            qty: "120g",
             pct: 20
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Manteiga sem sal, ponto pomada", qty: "120g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Manteiga sem sal, ponto pomada",
+            qty: "120g",
             pct: 20
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Fermento biológico seco", qty: "7g",
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Fermento biológico seco",
+            qty: "7g",
             pct: 1.17
-          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } } },
-          { name: "Sal", qty: "8g",
+          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } },
+          {
+            name: "Sal",
+            qty: "8g",
             pct: 1.33
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } },
-          { name: "Baunilha", qty: "8–10g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          {
+            name: "Baunilha",
+            qty: "8–10g",
             pct: 1.3
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Raspas de limão ou laranja", qty: "q.b."
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Raspas de limão ou laranja",
+            qty: "q.b."
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       }
     ],
@@ -266,52 +290,80 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Tangzhong (retirado da fórmula)",
         items: [
-          { name: "Farinha de trigo", qty: "40g",
+          {
+            name: "Farinha de trigo",
+            qty: "40g",
             pct: 560
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Leite integral", qty: "200g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Leite integral",
+            qty: "200g",
             pct: 420
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } }
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } }
         ]
       },
       {
         name: "B. Massa Principal (100% = 560g farinha)",
         items: [
-          { name: "Farinha de trigo média/forte", qty: "560g",
+          {
+            name: "Farinha de trigo média/forte",
+            qty: "560g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Leite integral", qty: "420g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Leite integral",
+            qty: "420g",
             pct: 75
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Ovos inteiros", qty: "100g",
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Ovos inteiros",
+            qty: "100g",
             pct: 17.9
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Gemas", qty: "36g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Gemas",
+            qty: "36g",
             pct: 6.4
-          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } } },
-          { name: "Açúcar refinado", qty: "120g",
+          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } },
+          {
+            name: "Açúcar refinado",
+            qty: "120g",
             pct: 21.4
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Cacau em pó 100%", qty: "35–45g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Cacau em pó 100%",
+            qty: "35–45g",
             pct: 6.3
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Manteiga sem sal, ponto pomada", qty: "90g",
+          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          {
+            name: "Manteiga sem sal, ponto pomada",
+            qty: "90g",
             pct: 16.1
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Fermento biológico seco", qty: "7g",
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Fermento biológico seco",
+            qty: "7g",
             pct: 1.25
-          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } } },
-          { name: "Sal", qty: "8g",
+          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } },
+          {
+            name: "Sal",
+            qty: "8g",
             pct: 1.43
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } },
-          { name: "Café solúvel", qty: "4–6g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          {
+            name: "Café solúvel",
+            qty: "4–6g",
             pct: 0.7
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Baunilha", qty: "8–10g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Baunilha",
+            qty: "8–10g",
             pct: 1.4
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Raspas de cítrico", qty: "q.b. ou opcional"
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Raspas de cítrico",
+            qty: "q.b. ou opcional"
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       }
     ],
@@ -397,21 +449,31 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Estrutura",
         items: [
-          { name: "Açúcar refinado", qty: "510g"
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Farinha de trigo", qty: "225g"
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Manteiga sem sal, gelada e cubada", qty: "180g"
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } }
+          {
+            name: "Açúcar refinado",
+            qty: "510g"
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Farinha de trigo",
+            qty: "225g"
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Manteiga sem sal, gelada e cubada",
+            qty: "180g"
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } }
         ]
       },
       {
         name: "B. Aromáticos",
         items: [
-          { name: "Raspas de limão siciliano ou tahiti", qty: "q.b."
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Canela em pó", qty: "q.b."
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          {
+            name: "Raspas de limão siciliano ou tahiti",
+            qty: "q.b."
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Canela em pó",
+            qty: "q.b."
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       }
     ],
@@ -459,27 +521,43 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Estrutura",
         items: [
-          { name: "Açúcar refinado", qty: "360g"
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Açúcar mascavo", qty: "150g"
-          , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 } } },
-          { name: "Farinha de trigo", qty: "225g"
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Manteiga sem sal, gelada e cubada", qty: "180g"
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } }
+          {
+            name: "Açúcar refinado",
+            qty: "360g"
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Açúcar mascavo",
+            qty: "150g"
+          , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 } },
+          {
+            name: "Farinha de trigo",
+            qty: "225g"
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Manteiga sem sal, gelada e cubada",
+            qty: "180g"
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } }
         ]
       },
       {
         name: "B. Sabor & Intensidade",
         items: [
-          { name: "Cacau em pó 100%", qty: "18–25g"
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Café solúvel", qty: "2–3g"
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Canela em pó", qty: "q.b."
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Sal fino", qty: "2g"
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } }
+          {
+            name: "Cacau em pó 100%",
+            qty: "18–25g"
+          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          {
+            name: "Café solúvel",
+            qty: "2–3g"
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Canela em pó",
+            qty: "q.b."
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Sal fino",
+            qty: "2g"
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } }
         ]
       }
     ],
@@ -525,30 +603,46 @@ export const recipes: RecipeProps[] = [
       {
         name: "Fórmula (100% = 150g farinha)",
         items: [
-          { name: "Farinha de trigo", qty: "150g",
+          {
+            name: "Farinha de trigo",
+            qty: "150g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Açúcar refinado", qty: "200g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Açúcar refinado",
+            qty: "200g",
             pct: 133.3
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Ovos inteiros", qty: "200g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Ovos inteiros",
+            qty: "200g",
             pct: 133.3
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Leite integral", qty: "62g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Leite integral",
+            qty: "62g",
             pct: 41.3
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Óleo de soja", qty: "46g",
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Óleo de soja",
+            qty: "46g",
             pct: 30.7
-          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } } },
-          { name: "Fermento em pó químico", qty: "12g",
+          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } },
+          {
+            name: "Fermento em pó químico",
+            qty: "12g",
             pct: 8
-          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } } },
-          { name: "Vinagre de álcool ou vinho branco", qty: "~15g",
+          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } },
+          {
+            name: "Vinagre de álcool ou vinho branco",
+            qty: "~15g",
             pct: 1
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Essência de baunilha", qty: "~5g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Essência de baunilha",
+            qty: "~5g",
             pct: 1
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       }
     ],
@@ -617,50 +711,78 @@ export const recipes: RecipeProps[] = [
       {
         name: "Massa",
         items: [
-          { name: "Cenouras picadas", qty: "400g",
+          {
+            name: "Cenouras picadas",
+            qty: "400g",
             pct: 4
-          , nutrition: { calories: 41, carbs: 9.6, proteins: 0.9, totalFats: 0.2, saturatedFats: 0, fibers: 3.2, sodium: 69 , nutrition: { calories: 41, carbs: 9.6, proteins: 0.9, totalFats: 0.2, saturatedFats: 0, fibers: 3.2, sodium: 69 } } },
-          { name: "Óleo vegetal", qty: "200ml",
+          , nutrition: { calories: 41, carbs: 9.6, proteins: 0.9, totalFats: 0.2, saturatedFats: 0, fibers: 3.2, sodium: 69 } },
+          {
+            name: "Óleo vegetal",
+            qty: "200ml",
             pct: 1
-          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 , weightInGrams: 200, nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } } },
-          { name: "Ovos inteiros", qty: "150g",
+          , weightInGrams: 200, nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } },
+          {
+            name: "Ovos inteiros",
+            qty: "150g",
             pct: 3
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Açúcar refinado", qty: "400g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Açúcar refinado",
+            qty: "400g",
             pct: 2
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Farinha de trigo", qty: "330g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Farinha de trigo",
+            qty: "330g",
             pct: 2
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Fermento em pó químico", qty: "12g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Fermento em pó químico",
+            qty: "12g",
             pct: 1
-          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } } }
+          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } }
         ]
       },
       {
         name: "Cobertura Casquinha",
         items: [
-          { name: "Açúcar refinado", qty: "1 xícara"
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , weightInGrams: 180, nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Cacau em pó 50%", qty: "1 xícara"
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , weightInGrams: 90, nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Leite integral", qty: "6 col. sopa"
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , weightInGrams: 90, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Manteiga sem sal", qty: "1 col. sopa"
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , weightInGrams: 20, nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } }
+          {
+            name: "Açúcar refinado",
+            qty: "1 xícara"
+          , weightInGrams: 180, nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Cacau em pó 50%",
+            qty: "1 xícara"
+          , weightInGrams: 90, nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          {
+            name: "Leite integral",
+            qty: "6 col. sopa"
+          , weightInGrams: 90, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Manteiga sem sal",
+            qty: "1 col. sopa"
+          , weightInGrams: 20, nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } }
         ]
       },
       {
         name: "Cobertura Cremosa",
         items: [
-          { name: "Manteiga sem sal", qty: "100g"
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Açúcar refinado", qty: "1½ xícara"
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , weightInGrams: 270, nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Cacau em pó 50%", qty: "1 xícara"
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , weightInGrams: 90, nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Leite integral", qty: "3 xícaras"
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , weightInGrams: 360, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } }
+          {
+            name: "Manteiga sem sal",
+            qty: "100g"
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Açúcar refinado",
+            qty: "1½ xícara"
+          , weightInGrams: 270, nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Cacau em pó 50%",
+            qty: "1 xícara"
+          , weightInGrams: 90, nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          {
+            name: "Leite integral",
+            qty: "3 xícaras"
+          , weightInGrams: 360, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } }
         ]
       }
     ],
@@ -708,27 +830,41 @@ export const recipes: RecipeProps[] = [
       {
         name: "Fórmula (100% = 130g farinha)",
         items: [
-          { name: "Farinha de trigo", qty: "130g",
+          {
+            name: "Farinha de trigo",
+            qty: "130g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Açúcar refinado", qty: "200g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Açúcar refinado",
+            qty: "200g",
             pct: 153.8
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Ovos inteiros", qty: "200g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Ovos inteiros",
+            qty: "200g",
             pct: 153.8
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Água", qty: "60g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Água",
+            qty: "60g",
             pct: 46.2
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Óleo de soja", qty: "60g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Óleo de soja",
+            qty: "60g",
             pct: 46.2
-          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } } },
-          { name: "Cacau em pó 100%", qty: "20g",
+          , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } },
+          {
+            name: "Cacau em pó 100%",
+            qty: "20g",
             pct: 15.4
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Fermento em pó químico", qty: "12g",
+          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          {
+            name: "Fermento em pó químico",
+            qty: "12g",
             pct: 9.2
-          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } } }
+          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } }
         ]
       }
     ],
@@ -786,15 +922,23 @@ export const recipes: RecipeProps[] = [
       {
         name: "Fórmula",
         items: [
-          { name: "Leite condensado", qty: "395g"
-          , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 } } },
-          { name: "Creme de leite", qty: "200g"
-          , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 } } },
-          { name: "Chocolate meio amargo em barra", qty: "80g"
-          , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } } },
-          { name: "Cacau em pó 70%", qty: "~8g",
+          {
+            name: "Leite condensado",
+            qty: "395g"
+          , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 } },
+          {
+            name: "Creme de leite",
+            qty: "200g"
+          , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 } },
+          {
+            name: "Chocolate meio amargo em barra",
+            qty: "80g"
+          , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } },
+          {
+            name: "Cacau em pó 70%",
+            qty: "~8g",
             pct: 1
-          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } }
+          , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } }
         ]
       }
     ],
@@ -848,14 +992,22 @@ export const recipes: RecipeProps[] = [
       {
         name: "Fórmula",
         items: [
-          { name: "Leite condensado", qty: "395g"
-          , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 } } },
-          { name: "Creme de leite", qty: "200g"
-          , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 } } },
-          { name: "Leite integral", qty: "~200g"
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Coco ralado em flocos", qty: "100g"
-          , nutrition: { calories: 663, carbs: 23.7, proteins: 6.9, totalFats: 64.5, saturatedFats: 57, fibers: 16.3, sodium: 37 , nutrition: { calories: 663, carbs: 23.7, proteins: 6.9, totalFats: 64.5, saturatedFats: 57, fibers: 16.3, sodium: 37 } } }
+          {
+            name: "Leite condensado",
+            qty: "395g"
+          , nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 } },
+          {
+            name: "Creme de leite",
+            qty: "200g"
+          , nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 } },
+          {
+            name: "Leite integral",
+            qty: "~200g"
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Coco ralado em flocos",
+            qty: "100g"
+          , nutrition: { calories: 663, carbs: 23.7, proteins: 6.9, totalFats: 64.5, saturatedFats: 57, fibers: 16.3, sodium: 37 } }
         ]
       }
     ],
@@ -902,43 +1054,61 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Blend de Amidos (Estrutura)",
         items: [
-          { name: "Polvilho Azedo", qty: "250g",
+          {
+            name: "Polvilho Azedo",
+            qty: "250g",
             pct: 50
-          , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Polvilho Doce", qty: "250g",
+          , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Polvilho Doce",
+            qty: "250g",
             pct: 50
-          , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Sal Refinado", qty: "10–12g",
+          , nutrition: { calories: 353, carbs: 87.2, proteins: 0.4, totalFats: 0.1, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Sal Refinado",
+            qty: "10–12g",
             pct: 2
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } }
         ]
       },
       {
         name: "B. Escaldo (Líquidos + Gordura)",
         items: [
-          { name: "Leite Integral", qty: "150ml",
+          {
+            name: "Leite Integral",
+            qty: "150ml",
             pct: 30
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , weightInGrams: 150, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Água", qty: "150ml",
+          , weightInGrams: 150, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Água",
+            qty: "150ml",
             pct: 30
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 150, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Gordura (Óleo/Banha/Manteiga)", qty: "100ml",
+          , weightInGrams: 150, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Gordura (Óleo/Banha/Manteiga)",
+            qty: "100ml",
             pct: 18
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , weightInGrams: 100, nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } }
+          , weightInGrams: 100, nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } }
         ]
       },
       {
         name: "C. Liga e Sabor (Finalização)",
         items: [
-          { name: "Ovos Tipo Grande/Extra", qty: "3–4 un.",
+          {
+            name: "Ovos Tipo Grande/Extra",
+            qty: "3–4 un.",
             pct: 150
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , weightInGrams: 150, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Queijo Meia Cura / Canastra, ralado grosso", qty: "350g",
+          , weightInGrams: 150, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Queijo Meia Cura / Canastra, ralado grosso",
+            qty: "350g",
             pct: 70
-          , nutrition: { calories: 318, carbs: 1.5, proteins: 21.2, totalFats: 25.1, saturatedFats: 16, fibers: 0, sodium: 477 , nutrition: { calories: 318, carbs: 1.5, proteins: 21.2, totalFats: 25.1, saturatedFats: 16, fibers: 0, sodium: 477 } } },
-          { name: "Queijo Parmesão, ralado fino", qty: "50g",
+          , nutrition: { calories: 318, carbs: 1.5, proteins: 21.2, totalFats: 25.1, saturatedFats: 16, fibers: 0, sodium: 477 } },
+          {
+            name: "Queijo Parmesão, ralado fino",
+            qty: "50g",
             pct: 10
-          , nutrition: { calories: 431, carbs: 3.2, proteins: 38.5, totalFats: 28.6, saturatedFats: 18.2, fibers: 0, sodium: 1528 , nutrition: { calories: 431, carbs: 3.2, proteins: 38.5, totalFats: 28.6, saturatedFats: 18.2, fibers: 0, sodium: 1528 } } }
+          , nutrition: { calories: 431, carbs: 3.2, proteins: 38.5, totalFats: 28.6, saturatedFats: 18.2, fibers: 0, sodium: 1528 } }
         ]
       }
     ],
@@ -1006,29 +1176,45 @@ export const recipes: RecipeProps[] = [
       {
         name: "Fórmula (100% = 600g farinha)",
         items: [
-          { name: "Farinha de trigo", qty: "600g",
+          {
+            name: "Farinha de trigo",
+            qty: "600g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Leite integral", qty: "320g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Leite integral",
+            qty: "320g",
             pct: 53.3
-          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } } },
-          { name: "Açúcar", qty: "60g",
+          , nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          {
+            name: "Açúcar",
+            qty: "60g",
             pct: 10
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Ovos", qty: "2 un.",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Ovos",
+            qty: "2 un.",
             pct: 16.7
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , weightInGrams: 100, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Manteiga sem sal, ponto pomada", qty: "80g",
+          , weightInGrams: 100, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Manteiga sem sal, ponto pomada",
+            qty: "80g",
             pct: 13.3
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Sal", qty: "12g",
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Sal",
+            qty: "12g",
             pct: 2
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } },
-          { name: "Fermento biológico seco", qty: "5g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          {
+            name: "Fermento biológico seco",
+            qty: "5g",
             pct: 0.83
-          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } } },
-          { name: "Essência de baunilha", qty: "1 col. sopa"
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 15, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } },
+          {
+            name: "Essência de baunilha",
+            qty: "1 col. sopa"
+          , weightInGrams: 15, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       }
     ],
@@ -1095,59 +1281,89 @@ export const recipes: RecipeProps[] = [
       {
         name: "Esponja (Pré-fermento)",
         items: [
-          { name: "Farinha de trigo", qty: "100g",
+          {
+            name: "Farinha de trigo",
+            qty: "100g",
             pct: 25
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Suco de laranja Bahia ou água gelada", qty: "100g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Suco de laranja Bahia ou água gelada",
+            qty: "100g",
             pct: 25
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Fermento biológico seco", qty: "10g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Fermento biológico seco",
+            qty: "10g",
             pct: 2.5
-          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } } }
+          , nutrition: { calories: 315, carbs: 54.3, proteins: 25.2, totalFats: 5.7, saturatedFats: 0.9, fibers: 8.1, sodium: 153 } }
         ]
       },
       {
         name: "Massa Principal (100% = 400g Farinha)",
         items: [
-          { name: "Esponja preparada", qty: "toda"
-            },
-          { name: "Farinha de trigo W300+ ou Tipo 1 Forte", qty: "300g",
+          {
+            name: "Esponja preparada",
+            qty: "toda"
+           },
+          {
+            name: "Farinha de trigo W300+ ou Tipo 1 Forte",
+            qty: "300g",
             pct: 75
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Gemas de ovos", qty: "5 un. (~90g)",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Gemas de ovos",
+            qty: "5 un. (~90g)",
             pct: 22.5
-          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } } },
-          { name: "Suco de Laranja Bahia gelado", qty: "100g",
+          , nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 } },
+          {
+            name: "Suco de Laranja Bahia gelado",
+            qty: "100g",
             pct: 25
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Açúcar refinado ou demerara", qty: "100g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Açúcar refinado ou demerara",
+            qty: "100g",
             pct: 25
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Leite em pó integral", qty: "20g",
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          {
+            name: "Leite em pó integral",
+            qty: "20g",
             pct: 5
-          , nutrition: { calories: 496, carbs: 38, proteins: 26, totalFats: 26.7, saturatedFats: 16.7, fibers: 0, sodium: 371 , nutrition: { calories: 496, carbs: 38, proteins: 26, totalFats: 26.7, saturatedFats: 16.7, fibers: 0, sodium: 371 } } },
-          { name: "Mel de abelha ou glucose", qty: "15g",
+          , nutrition: { calories: 496, carbs: 38, proteins: 26, totalFats: 26.7, saturatedFats: 16.7, fibers: 0, sodium: 371 } },
+          {
+            name: "Mel de abelha ou glucose",
+            qty: "15g",
             pct: 3.75
-          , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 } } },
-          { name: "Sal refinado", qty: "5g",
+          , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 } },
+          {
+            name: "Sal refinado",
+            qty: "5g",
             pct: 1.25
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } },
-          { name: "Manteiga sem sal ponto pomada", qty: "100g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          {
+            name: "Manteiga sem sal ponto pomada",
+            qty: "100g",
             pct: 25
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Extrato de baunilha de verdade", qty: "5g",
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Extrato de baunilha de verdade",
+            qty: "5g",
             pct: 1.25
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Raspas de 1 laranja Bahia e 1 limão siciliano", qty: "ou 5g essência"
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Raspas de 1 laranja Bahia e 1 limão siciliano",
+            qty: "ou 5g essência"
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       },
       {
         name: "Carga (Inclusões)",
         items: [
-          { name: "Gotas de chocolate meio amargo ou frutas\n                          cristalizadas", qty: "250g",
+          {
+            name: "Gotas de chocolate meio amargo ou frutas\n                          cristalizadas",
+            qty: "250g",
             pct: 62.5
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } }
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } }
         ]
       }
     ],
@@ -1220,65 +1436,99 @@ export const recipes: RecipeProps[] = [
       {
         name: "A. Base Úmida e Aromática (Líquidos)",
         items: [
-          { name: "Bananas maduras prata/nanica", qty: "800g",
+          {
+            name: "Bananas maduras prata/nanica",
+            qty: "800g",
             pct: 160
-          , nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 , nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 } } },
-          { name: "Manteiga sem sal (para Beurre Noisette)", qty: "250g",
+          , nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 } },
+          {
+            name: "Manteiga sem sal (para Beurre Noisette)",
+            qty: "250g",
             pct: 50
-          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } } },
-          { name: "Ovos integrais", qty: "6 un. (~330g)",
+          , nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          {
+            name: "Ovos integrais",
+            qty: "6 un. (~330g)",
             pct: 66
-          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Açúcar mascavo", qty: "350g",
+          , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          {
+            name: "Açúcar mascavo",
+            qty: "350g",
             pct: 70
-          , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 } } },
-          { name: "Melado de cana ou mel", qty: "50g",
+          , nutrition: { calories: 369, carbs: 94, proteins: 0.8, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 12 } },
+          {
+            name: "Melado de cana ou mel",
+            qty: "50g",
             pct: 10
-          , nutrition: { calories: 290, carbs: 75, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 15 , nutrition: { calories: 290, carbs: 75, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 15 } } },
-          { name: "Iogurte natural integral", qty: "100g",
+          , nutrition: { calories: 290, carbs: 75, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 15 } },
+          {
+            name: "Iogurte natural integral",
+            qty: "100g",
             pct: 20
-          , nutrition: { calories: 61, carbs: 4.7, proteins: 4.1, totalFats: 3, saturatedFats: 1.9, fibers: 0, sodium: 50 , nutrition: { calories: 61, carbs: 4.7, proteins: 4.1, totalFats: 3, saturatedFats: 1.9, fibers: 0, sodium: 50 } } },
-          { name: "Extrato de baunilha de verdade", qty: "10g",
+          , nutrition: { calories: 61, carbs: 4.7, proteins: 4.1, totalFats: 3, saturatedFats: 1.9, fibers: 0, sodium: 50 } },
+          {
+            name: "Extrato de baunilha de verdade",
+            qty: "10g",
             pct: 2
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       },
       {
         name: "B. Secos (Estrutura — 100% = 500g Farinha)",
         items: [
-          { name: "Farinha de trigo Tipo 1", qty: "500g",
+          {
+            name: "Farinha de trigo Tipo 1",
+            qty: "500g",
             pct: 100
-          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Aveia em flocos finos", qty: "100g",
+          , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          {
+            name: "Aveia em flocos finos",
+            qty: "100g",
             pct: 20
-          , nutrition: { calories: 394, carbs: 66.6, proteins: 13.9, totalFats: 8.5, saturatedFats: 1.6, fibers: 9.1, sodium: 5 , nutrition: { calories: 394, carbs: 66.6, proteins: 13.9, totalFats: 8.5, saturatedFats: 1.6, fibers: 9.1, sodium: 5 } } },
-          { name: "Canela em pó", qty: "5g",
+          , nutrition: { calories: 394, carbs: 66.6, proteins: 13.9, totalFats: 8.5, saturatedFats: 1.6, fibers: 9.1, sodium: 5 } },
+          {
+            name: "Canela em pó",
+            qty: "5g",
             pct: 1
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Sal refinado", qty: "5g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          {
+            name: "Sal refinado",
+            qty: "5g",
             pct: 1
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } } },
-          { name: "Fermento químico em pó", qty: "15g",
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } },
+          {
+            name: "Fermento químico em pó",
+            qty: "15g",
             pct: 3
-          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } } },
-          { name: "Bicarbonato de sódio", qty: "5g",
+          , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } },
+          {
+            name: "Bicarbonato de sódio",
+            qty: "5g",
             pct: 1
-          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 27360 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 27360 } } }
+          , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 27360 } }
         ]
       },
       {
         name: "C. Inclusões (Carga) e Topo",
         items: [
-          { name: "Chocolate amargo (70%) picado ou em gotas", qty: "200g",
+          {
+            name: "Chocolate amargo (70%) picado ou em gotas",
+            qty: "200g",
             pct: 40
-          , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } } },
-          { name: "Nozes ou pecãs tostadas e picadas", qty: "100g",
+          , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } },
+          {
+            name: "Nozes ou pecãs tostadas e picadas",
+            qty: "100g",
             pct: 20
-          , nutrition: { calories: 654, carbs: 13.7, proteins: 15.2, totalFats: 65.2, saturatedFats: 6.1, fibers: 6.7, sodium: 2 , nutrition: { calories: 654, carbs: 13.7, proteins: 15.2, totalFats: 65.2, saturatedFats: 6.1, fibers: 6.7, sodium: 2 } } },
-          { name: "Banana extra cortada ao meio (longitudinal)", qty: "1 un."
-          , nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 , weightInGrams: 100, nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 } } },
-          { name: "Açúcar cristal ou demerara", qty: "a gosto"
-          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } }
+          , nutrition: { calories: 654, carbs: 13.7, proteins: 15.2, totalFats: 65.2, saturatedFats: 6.1, fibers: 6.7, sodium: 2 } },
+          {
+            name: "Banana extra cortada ao meio (longitudinal)",
+            qty: "1 un."
+          , weightInGrams: 100, nutrition: { calories: 98, carbs: 26, proteins: 1.3, totalFats: 0.1, saturatedFats: 0, fibers: 2, sodium: 0 } },
+          {
+            name: "Açúcar cristal ou demerara",
+            qty: "a gosto"
+          , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } }
         ]
       }
     ],
@@ -1349,34 +1599,34 @@ export const recipes: RecipeProps[] = [
       {
         name: "Massa (Pão de Ló Especiarias)",
         items: [
-          { name: "Ovos", qty: "4 un." , nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 , weightInGrams: 200, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } } },
-          { name: "Açúcar", qty: "200g" , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Farinha de trigo", qty: "140g" , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } } },
-          { name: "Mel", qty: "60g" , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 } } },
-          { name: "Óleo", qty: "65ml" , nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 , weightInGrams: 65, nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } } },
-          { name: "Água quente", qty: "60ml" , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 60, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Cacau em pó", qty: "10g" , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } } },
-          { name: "Canela em pó", qty: "2 col. café" , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 10, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Cravo em pó", qty: "1 col. café" , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 5, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Gengibre em pó (ou noz moscada)", qty: "1 col. café" , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 5, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Fermento químico para bolos", qty: "1 col. sopa rasa" , nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 , weightInGrams: 15, nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } } }
+          { name: "Ovos", qty: "4 un." , weightInGrams: 200, nutrition: { calories: 143, carbs: 1.6, proteins: 13, totalFats: 8.9, saturatedFats: 2.7, fibers: 0, sodium: 168 } },
+          { name: "Açúcar", qty: "200g" , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          { name: "Farinha de trigo", qty: "140g" , nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1, saturatedFats: 0.2, fibers: 2.7, sodium: 2 } },
+          { name: "Mel", qty: "60g" , nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 } },
+          { name: "Óleo", qty: "65ml" , weightInGrams: 65, nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 15, fibers: 0, sodium: 0 } },
+          { name: "Água quente", qty: "60ml" , weightInGrams: 60, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Cacau em pó", qty: "10g" , nutrition: { calories: 228, carbs: 58, proteins: 20, totalFats: 14, saturatedFats: 8, fibers: 33, sodium: 21 } },
+          { name: "Canela em pó", qty: "2 col. café" , weightInGrams: 10, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Cravo em pó", qty: "1 col. café" , weightInGrams: 5, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Gengibre em pó (ou noz moscada)", qty: "1 col. café" , weightInGrams: 5, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Fermento químico para bolos", qty: "1 col. sopa rasa" , weightInGrams: 15, nutrition: { calories: 53, carbs: 24.3, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 14234 } }
         ]
       },
       {
         name: "Calda de Infusão",
         items: [
-          { name: "Água", qty: "240ml" , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , weightInGrams: 240, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Açúcar", qty: "90g" , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } } },
-          { name: "Pau de canela", qty: "1 un." , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } },
-          { name: "Cravos-da-índia", qty: "5 un." , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } } }
+          { name: "Água", qty: "240ml" , weightInGrams: 240, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Açúcar", qty: "90g" , nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          { name: "Pau de canela", qty: "1 un." , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Cravos-da-índia", qty: "5 un." , nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
         ]
       },
       {
         name: "Recheio e Cobertura",
         items: [
-          { name: "Doce de leite firme (recheio)", qty: "400g" , nutrition: { calories: 315, carbs: 60.1, proteins: 6.3, totalFats: 5.5, saturatedFats: 3.1, fibers: 0, sodium: 122 , nutrition: { calories: 315, carbs: 60.1, proteins: 6.3, totalFats: 5.5, saturatedFats: 3.1, fibers: 0, sodium: 122 } } },
-          { name: "Chocolate meio amargo (ganache)", qty: "300g" , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } } },
-          { name: "Creme de leite (ganache)", qty: "120g" , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } } }
+          { name: "Doce de leite firme (recheio)", qty: "400g" , nutrition: { calories: 315, carbs: 60.1, proteins: 6.3, totalFats: 5.5, saturatedFats: 3.1, fibers: 0, sodium: 122 } },
+          { name: "Chocolate meio amargo (ganache)", qty: "300g" , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } },
+          { name: "Creme de leite (ganache)", qty: "120g" , nutrition: { calories: 536, carbs: 62.7, proteins: 5.2, totalFats: 29.8, saturatedFats: 18.2, fibers: 8.2, sodium: 15 } }
         ]
       }
     ],
