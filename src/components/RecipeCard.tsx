@@ -4,38 +4,9 @@ import { Plus, Minus, Info, Scale, ChefHat, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { useRecipeScaler } from "../hooks/useRecipeScaler";
 import { useKitchenStore } from "../store/useKitchenStore";
+import { NutritionTable } from "./NutritionTable";
 import { handleAskSousChef } from "../utils/sousChef";
-
-export interface Ingredient {
-  name: string;
-  qty: string;
-  pct?: number; // Baker's percentage
-}
-
-export interface IngredientGroup {
-  name: string;
-  items: Ingredient[];
-}
-
-export interface RecipeStep {
-  text: React.ReactNode;
-}
-
-export interface RecipeNote {
-  title: string;
-  content: React.ReactNode;
-}
-
-export interface RecipeProps {
-  id: string;
-  title: string;
-  chips: { label: string; accent?: boolean }[];
-  meta: { label: string; value: string }[];
-  image: string;
-  ingredients: IngredientGroup[];
-  method: RecipeStep[];
-  notes?: RecipeNote[];
-}
+import { RecipeProps } from "../types/recipe";
 
 export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -266,6 +237,8 @@ export const RecipeCard: React.FC<{ recipe: RecipeProps }> = ({ recipe }) => {
                     </div>
                   </div>
                 )}
+
+                <NutritionTable recipe={recipe} multiplier={multiplier} />
 
               </div>
             </motion.div>

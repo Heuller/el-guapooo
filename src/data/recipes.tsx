@@ -1,4 +1,4 @@
-import { RecipeProps } from "../components/RecipeCard";
+import { RecipeProps } from "../types/recipe";
 
 export const recipes: RecipeProps[] = [
   {
@@ -14,17 +14,36 @@ export const recipes: RecipeProps[] = [
       { label: "Rendimento", value: "2 pizzas ~435g" },
       { label: "Hidratação", value: "65%" },
     ],
+    nutritionConfig: { portionSize: 108, portionLabel: "fatia (1/8)" },
     image: "images/el-guapo-img-01.webp",
     ingredients: [
       {
         name: "Base (100% = 500g farinha)",
         items: [
-          { name: "Farinha W300+ ou Tipo 1 Forte", qty: "500g", pct: 100 },
-          { name: "Água", qty: "325g", pct: 65 },
-          { name: "Fermento biológico fresco", qty: "5g", pct: 1 },
-          { name: "Mel ou açúcar", qty: "10g", pct: 2 },
-          { name: "Sal refinado", qty: "12g", pct: 2.4 },
-          { name: "Azeite de oliva", qty: "20g", pct: 4 },
+          { 
+            name: "Farinha W300+ ou Tipo 1 Forte", qty: "500g", pct: 100,
+            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 }
+          },
+          { 
+            name: "Água", qty: "325g", pct: 65,
+            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 }
+          },
+          { 
+            name: "Fermento biológico fresco", qty: "5g", pct: 1,
+            nutrition: { calories: 105, carbs: 18.1, proteins: 8.4, totalFats: 1.9, saturatedFats: 0.3, fibers: 2.7, sodium: 51 }
+          },
+          { 
+            name: "Mel ou açúcar", qty: "10g", pct: 2,
+            nutrition: { calories: 304, carbs: 82.4, proteins: 0.3, totalFats: 0, saturatedFats: 0, fibers: 0.2, sodium: 4 }
+          },
+          { 
+            name: "Sal refinado", qty: "12g", pct: 2.4,
+            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 }
+          },
+          { 
+            name: "Azeite de oliva", qty: "20g", pct: 4,
+            nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 }
+          },
         ],
       },
     ],
@@ -62,27 +81,58 @@ export const recipes: RecipeProps[] = [
       { label: "Rendimento", value: "6–7 un." },
       { label: "Preparo", value: "4–6 h" },
     ],
+    nutritionConfig: { portionSize: 120, portionLabel: "fatia (1/6)" },
     image: "images/el-guapo-img-02.webp",
     ingredients: [
       {
         name: "Tangzhong",
         items: [
-          { name: "Farinha de trigo", qty: "50g" },
-          { name: "Leite integral", qty: "250g" },
+          { 
+            name: "Farinha de trigo", qty: "50g",
+            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 }
+          },
+          { 
+            name: "Leite integral", qty: "250g",
+            nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 }
+          },
         ],
       },
       {
         name: "Massa Final (100% = 600g farinha)",
         items: [
-          { name: "Farinha de trigo média/forte", qty: "550g", pct: 100 },
-          { name: "Leite integral gelado", qty: "260g", pct: 85 },
-          { name: "Tangzhong preparado", qty: "todo", pct: undefined },
-          { name: "Gemas", qty: "3 un.", pct: 9 },
-          { name: "Açúcar refinado", qty: "42g", pct: 7 },
-          { name: "Manteiga sem sal", qty: "70g", pct: 11.6 },
-          { name: "Azeite de oliva", qty: "40g", pct: 6.6 },
-          { name: "Sal refinado", qty: "12g", pct: 2 },
-          { name: "Fermento biológico seco", qty: "2g", pct: 0.3 },
+          { 
+            name: "Farinha de trigo média/forte", qty: "550g", pct: 100,
+            nutrition: { calories: 364, carbs: 76.3, proteins: 10.3, totalFats: 1.0, saturatedFats: 0.2, fibers: 2.7, sodium: 2 }
+          },
+          { 
+            name: "Leite integral gelado", qty: "260g", pct: 85,
+            nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 }
+          },
+          { name: "Tangzhong preparado", qty: "todo", pct: undefined }, // sem nutrição = 0g
+          { 
+            name: "Gemas", qty: "3 un.", pct: 9, weightInGrams: 50,
+            nutrition: { calories: 322, carbs: 3.6, proteins: 15.9, totalFats: 26.5, saturatedFats: 9.5, fibers: 0, sodium: 48 }
+          },
+          { 
+            name: "Açúcar refinado", qty: "42g", pct: 7,
+            nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 }
+          },
+          { 
+            name: "Manteiga sem sal", qty: "70g", pct: 11.6,
+            nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 }
+          },
+          { 
+            name: "Azeite de oliva", qty: "40g", pct: 6.6,
+            nutrition: { calories: 884, carbs: 0, proteins: 0, totalFats: 100, saturatedFats: 14, fibers: 0, sodium: 2 }
+          },
+          { 
+            name: "Sal refinado", qty: "12g", pct: 2,
+            nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 }
+          },
+          { 
+            name: "Fermento biológico seco", qty: "2g", pct: 0.3,
+            nutrition: { calories: 325, carbs: 41, proteins: 40, totalFats: 5.5, saturatedFats: 0, fibers: 27, sodium: 51 }
+          },
         ],
       },
     ],

@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon, Leaf, ChefHat } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Check, Timer as TimerIcon, Leaf, ChefHat, TableProperties } from 'lucide-react';
 import { useKitchenStore } from '../store/useKitchenStore';
 import { useTimerStore } from '../store/useTimerStore';
 import { recipes } from '../data/recipes';
@@ -9,9 +9,11 @@ import { extractTimers } from '../lib/extractTimers';
 import { cn } from '../lib/utils';
 import confetti from 'canvas-confetti';
 import { useWakeLock } from '../hooks/useWakeLock';
+import { NutritionTable } from './NutritionTable';
 
 export const KitchenMode = () => {
   const { isActive, recipeName, steps, currentStepIndex, closeKitchenMode, nextStep, prevStep, lowPowerMode, toggleLowPowerMode, recipeId, multiplier } = useKitchenStore();
+  const [showNutrition, setShowNutrition] = useState(false);
   useWakeLock();
 
   const currentRecipe = recipes.find(r => r.id === recipeId);
@@ -45,7 +47,8 @@ export const KitchenMode = () => {
   };
 
   return (
-    <AnimatePresence>
+    <>
+      <AnimatePresence>
       {isActive && (
         <motion.div
           initial={{ opacity: 0, y: "100%" }}
@@ -133,6 +136,15 @@ export const KitchenMode = () => {
           {/* Footer Controls */}
           <footer className="p-6 border-t border-dark-warm bg-dark-warm/30 flex items-center justify-between">
             <div className="flex gap-4">
+              {currentRecipe?.nutritionConfig && (
+                 <button
+                   onClick={() => setShowNutrition(true)}
+                   className="p-3 text-terra-light border border-terra/30 hover:bg-terra/20 transition-colors rounded-full"
+                   title="Informação Nutricional"
+                 >
+                   <TableProperties size={24} strokeWidth={1.5} />
+                 </button>
+              )}
               {currentRecipe && (
                  <button
                    onClick={() => {
@@ -187,6 +199,40 @@ export const KitchenMode = () => {
           </footer>
         </motion.div>
       )}
-    </AnimatePresence>
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showNutrition && currentRecipe && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[150] bg-black/60 flex flex-col items-center justify-end md:justify-center p-4 backdrop-blur-sm"
+            onClick={() => setShowNutrition(false)}
+          >
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "100%", opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-t-3xl md:rounded-3xl shadow-2xl bg-paper dark:bg-paper-invert border border-line dark:border-line-invert relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="sticky top-0 right-0 p-4 flex justify-end z-10">
+                <button 
+                  onClick={() => setShowNutrition(false)}
+                  className="p-2 bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 rounded-full transition-colors text-ink dark:text-ink-invert"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              <div className="px-6 pb-8 -mt-10">
+                <NutritionTable recipe={currentRecipe} multiplier={multiplier} defaultOpen={true} />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
