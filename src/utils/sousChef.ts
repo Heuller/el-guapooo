@@ -1,4 +1,4 @@
-import { RecipeProps } from '../components/RecipeCard';
+import { RecipeProps } from '../types/recipe';
 
 export const generateSousChefPrompt = (recipe: RecipeProps, multiplier: number) => {
   const metaData = recipe.meta.map(m => `${m.label}: ${m.value}`).join(" | ");
