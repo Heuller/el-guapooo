@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, TableProperties } from "lucide-react";
 import { RecipeProps } from "../types/recipe";
 import { calculateNutrition } from "../utils/calculateNutrition";
-import { cn } from "../lib/utils";
+
 
 export const NutritionTable: React.FC<{ recipe: RecipeProps; multiplier: number; defaultOpen?: boolean }> = ({ recipe, multiplier, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
