@@ -70,7 +70,7 @@ export const useTimerStore = create<TimerState>((set, get) => {
         osc.start(t0);
         osc.stop(t0 + 1.5);
       });
-    } catch (_) {}
+    } catch { }
   };
 
   return {

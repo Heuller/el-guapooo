@@ -85,7 +85,7 @@ export const useSemanticSearch = () => {
       console.error("Worker initialization error:", e);
       useSearchStore.getState().setFallback(true);
     }
-  }, []);
+  }, [setFallback, setResults]);
 
   useEffect(() => {
     if (!query) {
@@ -110,5 +110,5 @@ export const useSemanticSearch = () => {
     return () => {
       if (debounceTimeout.current) window.clearTimeout(debounceTimeout.current);
     };
-  }, [query, isFallback, isReady]);
+  }, [query, isFallback, isReady, setResults]);
 };
