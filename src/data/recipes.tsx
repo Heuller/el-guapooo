@@ -1640,5 +1640,73 @@ export const recipes: RecipeProps[] = [
       { text: <><strong>Montagem.</strong> Após o bolo esfriar, corte-o em camadas. Umedeça cada camada de massa de forma generosa com a calda de especiarias. Aplique uma camada uniforme do doce de leite firme. Cubra o bolo montado com a ganache de chocolate meio amargo.</> }
     ],
     notes: []
+  },
+  {
+    id: "arroz-doce-toffee-amburana",
+    title: "Arroz Doce Toffee Amburana",
+    chips: [
+      { label: "Sobremesa de Colher" },
+      { label: "Caramelo Toffee", accent: true },
+      { label: "Cachaça Amburana" },
+      { label: "Servido Gelado" },
+    ],
+    meta: [
+      { label: "Rendimento", value: "11–12 potes (220ml)" },
+      { label: "Serviço", value: "Gelado" },
+    ],
+    nutritionConfig: { portionSize: 220, portionLabel: "pote (220ml)" },
+    image: "images/arroz-doce-toffee-amburana.jpg",
+    ingredients: [
+      {
+        name: "Fase 1 — O Cozimento (A Base)",
+        items: [
+          { name: "Arroz Agulhinha (não lavar)", qty: "350g", nutrition: { calories: 358, carbs: 78.1, proteins: 7.2, totalFats: 0.3, saturatedFats: 0.1, fibers: 1.6, sodium: 1 } },
+          { name: "Água filtrada", qty: "1200ml", weightInGrams: 1200, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Canela em pau", qty: "2 un.", nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Cravo-da-índia", qty: "5 un.", nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Café solúvel", qty: "1 pitada", nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } },
+          { name: "Sal refinado", qty: "4g", nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 38758 } }
+        ]
+      },
+      {
+        name: "Fase 2 — Base Toffee e Creme Lácteo",
+        items: [
+          { name: "Açúcar refinado", qty: "300g", nutrition: { calories: 387, carbs: 100, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 1 } },
+          { name: "Manteiga", qty: "40g", nutrition: { calories: 717, carbs: 0.1, proteins: 0.8, totalFats: 81.1, saturatedFats: 51.4, fibers: 0, sodium: 11 } },
+          { name: "Leite integral (bem quente)", qty: "1000ml", weightInGrams: 1000, nutrition: { calories: 60, carbs: 4.7, proteins: 3.2, totalFats: 3.3, saturatedFats: 2.1, fibers: 0, sodium: 44 } },
+          { name: "Leite condensado", qty: "395g", nutrition: { calories: 321, carbs: 57.3, proteins: 7.7, totalFats: 8.1, saturatedFats: 5, fibers: 0, sodium: 127 } },
+          { name: "Creme de leite (caixinha)", qty: "200g", nutrition: { calories: 223, carbs: 4.5, proteins: 2.3, totalFats: 22, saturatedFats: 13, fibers: 0, sodium: 47 } },
+          { name: "Cachaça envelhecida em Amburana", qty: "30ml", weightInGrams: 30, nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
+        ]
+      },
+      {
+        name: "Fase 3 — Finalização Aromática",
+        items: [
+          { name: "Canela em pó", qty: "Q.B.", nutrition: { calories: 0, carbs: 0, proteins: 0, totalFats: 0, saturatedFats: 0, fibers: 0, sodium: 0 } }
+        ]
+      }
+    ],
+    method: [
+      { text: <><strong className="text-ink">O Amaciamento do Grão.</strong> Em uma panela grande, coloque a água, o arroz, a canela em pau, os cravos, o café solúvel e o sal. Ligue o fogo médio, com a panela semitampada, e cozinhe até a água quase secar por completo e o grão estar extremamente macio (passando do ponto de um arroz salgado tradicional). Desligue, retire os cravos e as canelas em pau, e reserve.</> },
+      { text: <><strong className="text-ink">A Construção do Toffee.</strong> Enquanto o arroz cozinha, aqueça o litro de leite em outra leiteira. Em uma panela larga e de fundo grosso, coloque os 300g de açúcar em fogo médio-baixo. Derreta lentamente até atingir uma cor de caramelo âmbar profundo. Assim que atingir a cor desejada, incorpore os 40g de manteiga mexendo vigorosamente.</> },
+      { text: <><strong className="text-ink">O Deglace.</strong> Com cuidado (o choque térmico subirá vapor), despeje um terço do leite quente sobre o caramelo amanteigado. Mexa sem parar até dissolver os pedaços de açúcar cristalizado. Adicione o restante do leite. Você acabou de criar a base líquida de Leite Toffee.</> },
+      { text: <><strong className="text-ink">A Unificação e a Redução Visual.</strong> Despeje esse Leite Toffee quente diretamente na panela do arroz cozido e ligue em fogo baixo. Incorpore os 395g de leite condensado. Mexa constantemente, raspando o fundo, por 10 a 15 minutos. <em>Atenção ao Ponto:</em> Desligue o fogo quando a panela ainda apresentar a viscosidade de uma "sopa bem grossa" (quando a espátula nas costas da colher deixar um caminho limpo, mas ainda houver bastante líquido borbulhando). Não deixe secar.</> },
+      { text: <><strong className="text-ink">A Finalização de Alta Gastronomia (Fora do Fogo).</strong> Imediatamente após desligar o fogo, incorpore o creme de leite e os 30ml de cachaça Amburana. O calor residual evapora o álcool agressivo, travando as notas amadeiradas da bebida, enquanto a gordura fria do creme de leite interrompe o cozimento.</> },
+      { text: <><strong className="text-ink">O Porcionamento Seguro (Regra do Frio).</strong> Despeje o arroz doce ainda quente nos potinhos de 220ml. Deixe esfriar abertos na bancada por cerca de 1 hora até atingirem temperatura ambiente (isso evita a condensação de água na tampa). Faça uma chuva fina de canela em pó sobre a superfície de cada um, tampe hermeticamente e leve à geladeira a noite toda.</> }
+    ],
+    notes: [
+      {
+        title: "Por que não lavar o arroz?",
+        content: "Manter o amido superficial do grão é essencial: é ele que confere a cremosidade natural ao arroz doce, dispensando amido de milho ou espessantes."
+      },
+      {
+        title: "Cachaça Amburana",
+        content: "A cachaça envelhecida em barris de amburana contribui com notas de baunilha, canela e cumarina. O álcool evapora com o calor residual, restando apenas o perfil aromático."
+      },
+      {
+        title: "Ponto do Toffee",
+        content: "O caramelo deve atingir um âmbar profundo (170–180 °C). Mais claro ficará sem sabor; mais escuro amargará. A adição da manteiga estabiliza o caramelo e evita cristalização."
+      }
+    ]
   }
 ];
